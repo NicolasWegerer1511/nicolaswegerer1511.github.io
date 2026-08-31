@@ -9,7 +9,11 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="nav"><a class="brand" href="#top"><img src="nw-visuals-logo-v2.webp" alt="Nicolas Wegerer Visuals"></a><div class="navlinks"><a href="#studio">Studio</a><a href="#funktionen">Funktionen</a><a href="#geraete">Geräte</a><a class="pill pill-light" href="mailto:Nicolas.Wegerer@web.de">Kontakt</a></div></nav>
+  <nav class="nav"><a class="brand" href="#top"><img src="nw-visuals-logo-v2.webp" alt="Nicolas Wegerer Visuals"></a><div class="navlinks">
+    <div class="nav-item"><button type="button" aria-expanded="false">Studio <span>⌄</span></button><div class="dropdown"><small>VISUALS STUDIO</small><a href="#studio"><b>Überblick</b><em>Der komplette Workflow</em></a><a href="#workflow-info"><b>So arbeitet die App</b><em>Vom Import bis zur Auswertung</em></a><a href="#geraete"><b>Mac, iPhone & iPad</b><em>Auf jedem Gerät passend</em></a></div></div>
+    <div class="nav-item"><button type="button" aria-expanded="false">Funktionen <span>⌄</span></button><div class="dropdown wide"><small>FUNKTIONEN</small><a href="#editor"><b>Visual Editor</b><em>Presets, Looks und Lightroom</em></a><a href="#creator"><b>Smart Creator</b><em>Caption und Hashtags vorbereiten</em></a><a href="#planner"><b>Content-Planer</b><em>Beiträge visuell organisieren</em></a><a href="#inbox"><b>Inbox & Performance</b><em>Aktivitäten und Reichweite</em></a></div></div>
+    <a href="#geraete">Geräte</a><a class="pill pill-light" href="mailto:Nicolas.Wegerer@web.de">Kontakt</a>
+  </div></nav>
 
   <main id="top">
     <section class="hero reveal">
@@ -32,29 +36,40 @@
       <div class="hero-note">Ein Studio. Ein Workflow. Auf allen deinen Geräten.</div>
     </section>
 
-    <section class="intro reveal" id="studio"><div class="eyebrow">SO FUNKTIONIERT ES</div><h2>Vom Foto zum fertigen Post.<br><span>Ohne Umwege.</span></h2><p>Visuals Studio führt die wichtigsten Schritte zusammen. Die animierten Ansichten zeigen dir, wie dein Workflow aussehen kann.</p></section>
+    <section class="intro reveal" id="studio"><div class="eyebrow">SO FUNKTIONIERT ES</div><h2>Vom Foto zum fertigen Post.<br><span>Ohne Umwege.</span></h2><p>Visuals Studio führt Bildimport, Bearbeitung, Presets, Lightroom-Übergabe, Caption, Planung, Instagram-Aktivitäten und Auswertung in einer Oberfläche zusammen. Die animierten Ansichten zeigen den gesamten Ablauf.</p></section>
+
+    <section class="info-strip reveal" id="workflow-info"><article><strong>01</strong><div><b>Importieren</b><span>Fotos auf Mac, iPhone oder iPad auswählen.</span></div></article><i>→</i><article><strong>02</strong><div><b>Bearbeiten</b><span>Presets anwenden, eigene Looks speichern oder Lightroom nutzen.</span></div></article><i>→</i><article><strong>03</strong><div><b>Vorbereiten</b><span>Caption, Hashtags und Instagram-Vorschau prüfen.</span></div></article><i>→</i><article><strong>04</strong><div><b>Planen</b><span>Zeitpunkt wählen und Performance verfolgen.</span></div></article></section>
 
     <section class="story" id="funktionen">
-      <article class="story-row reveal">
+      <article class="story-row reveal" id="editor">
         <div class="story-copy"><span class="number">01</span><div class="eyebrow">CONTENT STUDIO</div><h2>Dein Bild.<br><span>Dein Look.</span></h2><p>Bearbeite Bilder mit Studio-Presets oder deinen eigenen gespeicherten Presets. Belichtung, Lichter, Tiefen, Wärme, Tönung, Schärfe, Klarheit, Vignette und Körnung bleiben direkt im Publishing-Workflow.</p><ul><li>10 Studio-Presets + eigene Presets</li><li>Feine Licht-, Farb- und Detailkontrolle</li><li>Lightroom Roundtrip über das Teilen-Menü</li></ul></div>
         <div class="demo editor-demo"><div class="demo-head"><span>Visual Editor</span><small>Live-Vorschau</small></div><div class="photo"><div class="before">ORIGINAL</div><div class="after">VISUALS LOOK</div><div class="wipe"></div><div class="photo-mark">NW</div></div><div class="controls"><label>Belichtung <i><b style="width:66%"></b></i><em>+0.35</em></label><label>Kontrast <i><b style="width:54%"></b></i><em>+12</em></label><label>Sättigung <i><b style="width:72%"></b></i><em>+8</em></label></div></div>
       </article>
 
-      <article class="story-row reverse reveal">
+      <article class="story-row reverse reveal" id="creator">
         <div class="story-copy"><span class="number">02</span><div class="eyebrow">SMART CREATOR</div><h2>Worte, die zum<br><span>Motiv passen.</span></h2><p>Bereite Caption und Hashtags direkt am Bild vor. Alles bleibt editierbar, bevor dein Beitrag in die Planung geht.</p><ul><li>Caption-Entwürfe passend zum Motiv</li><li>Hashtag-Sammlungen organisieren</li><li>Vorschau im Instagram-Format</li></ul></div>
         <div class="demo composer-demo"><div class="post-preview"><div class="post-top"><img src="app-icon.png" alt=""><b>nicolaswegerer.visuals</b><span>•••</span></div><div class="post-image"><span>Chasing light.</span></div><div class="post-actions">♡　⌁　➤</div><p><b>nicolaswegerer.visuals</b> Zwischen Licht, Linie und Bewegung entsteht der Moment.</p></div><div class="caption-card"><small>CAPTION-VORSCHLAG</small><p class="typing">Zwischen Licht, Linie und Bewegung entsteht der Moment.</p><div><span>#visualstory</span><span>#creativeworkflow</span><span>#shotoniphone</span></div></div></div>
       </article>
 
-      <article class="story-row reveal">
+      <article class="story-row reveal" id="planner">
         <div class="story-copy"><span class="number">03</span><div class="eyebrow">PLANER</div><h2>Der richtige Post.<br><span>Zur richtigen Zeit.</span></h2><p>Plane deine Woche visuell, verschiebe Beiträge und erkenne freie Tage auf einen Blick. Visuals Studio empfiehlt passende Veröffentlichungszeiten.</p><ul><li>Übersichtlicher Wochenkalender</li><li>Drag-and-drop auf dem Mac</li><li>Optimale Uhrzeit im Blick</li></ul></div>
         <div class="demo planner-demo"><div class="week"><div><b>MO</b><small>14</small></div><div><b>DI</b><small>15</small></div><div class="active"><b>MI</b><small>16</small></div><div><b>DO</b><small>17</small></div><div><b>FR</b><small>18</small></div></div><div class="schedule"><div class="time">18:00</div><div class="planned"><span class="thumb"></span><p><b>Neuer Beitrag</b><small>Light & Motion · Geplant</small></p><em>18:30</em></div><div class="time">20:00</div><div class="recommend">✦ Beste Aktivität heute: <b>19:00 Uhr</b></div></div></div>
       </article>
 
-      <article class="story-row reverse reveal">
+      <article class="story-row reverse reveal" id="inbox">
         <div class="story-copy"><span class="number">04</span><div class="eyebrow">INBOX & PERFORMANCE</div><h2>Reaktionen sehen.<br><span>Wachstum verstehen.</span></h2><p>Behalte neue Instagram-Aktivitäten und die Entwicklung deiner Inhalte in einer übersichtlichen Ansicht.</p><ul><li>Likes, Kommentare und Follower im Blick</li><li>Top-Beiträge schneller erkennen</li><li>Reichweite verständlich dargestellt</li></ul></div>
         <div class="demo inbox-demo"><div class="inbox-head"><h3>Aktivität</h3><span>3 neu</span></div><div class="notification"><i>♥</i><p><b>12 neue Likes</b><small>Dein letzter Beitrag kommt gut an.</small></p><em>Jetzt</em></div><div class="notification"><i>✦</i><p><b>Neue Bestleistung</b><small>+28 % mehr Reichweite als üblich.</small></p><em>8 Min.</em></div><div class="notification"><i>↗</i><p><b>Follower-Wachstum</b><small>Diese Woche +42 neue Konten.</small></p><em>Heute</em></div></div>
       </article>
     </section>
+
+    <section class="details reveal"><div class="details-head"><div class="eyebrow">MEHR ALS NUR EIN PLANER</div><h2>Alle Werkzeuge.<br><span>Eine klare Oberfläche.</span></h2><p>Jeder Bereich ist auf einen konkreten Schritt im Content-Alltag ausgelegt. So findest du schneller, was du gerade brauchst.</p></div><div class="detail-grid">
+      <article><i>◐</i><h3>Presets & eigene Looks</h3><p>Starte mit fertigen Bildstilen, passe sie an und speichere deine eigenen Presets für einen wiedererkennbaren Feed.</p><div class="preset-run"><span>Clean</span><span>Moody</span><span>Film</span><span>Custom +</span></div></article>
+      <article><i>LR</i><h3>Lightroom-Workflow</h3><p>Übernimm Bilder aus deinem Lightroom-Ablauf und führe Planung, Text und Veröffentlichung anschließend in Visuals Studio weiter.</p><div class="flow-mini"><b>Lightroom</b><em>→</em><b>Visuals Studio</b><em>→</em><b>Instagram</b></div></article>
+      <article><i>⌁</i><h3>Gerätegerechtes Layout</h3><p>Große Seitenleiste am Mac und iPad, kompakte Navigation auf dem iPhone – dieselben Funktionen passend dargestellt.</p><div class="size-bars"><b></b><b></b><b></b></div></article>
+      <article><i>◎</i><h3>Live-Aktivitäten</h3><p>Benachrichtigungen, Likes, Kommentare, Reichweite und Wachstum werden ruhig und verständlich zusammengeführt.</p><div class="pulse-row"><span></span><b>Neue Aktivität erkannt</b></div></article>
+      <article><i>▦</i><h3>Content-Bibliothek</h3><p>Entwürfe, geplante Inhalte und bereits veröffentlichte Beiträge bleiben übersichtlich sortiert und wieder auffindbar.</p><div class="library-mini"><span></span><span></span><span></span><span></span></div></article>
+      <article><i>↗</i><h3>Performance verstehen</h3><p>Erkenne auf einen Blick, welche Inhalte funktionieren und wie sich Reichweite und Interaktionen entwickeln.</p><div class="spark"><b></b><b></b><b></b><b></b><b></b><b></b></div></article>
+    </div></section>
 
     <section class="ecosystem reveal" id="geraete"><div class="eyebrow">EIN VERBUNDENES STUDIO</div><h2>Auf dem Mac entwickelt.<br><span>Überall dabei.</span></h2><p>Groß planen am Mac. Schnell bearbeiten am iPad. Ideen und Aktivitäten unterwegs auf dem iPhone prüfen.</p><div class="device-stage"><div class="device laptop"><div class="device-screen"><span>MAC</span><b>Das komplette Studio.</b></div></div><div class="device tablet"><div class="device-screen"><span>IPAD</span><b>Kreativ und flexibel.</b></div></div><div class="device mobile"><div class="device-screen"><span>IPHONE</span><b>Immer dabei.</b></div></div></div><div class="platforms"><span>macOS · SwiftUI</span><span>iPadOS · Adaptive Layouts</span><span>iOS · Mobile Companion</span></div></section>
 

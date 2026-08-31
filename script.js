@@ -12,3 +12,16 @@ if (!reduced) {
 } else {
   document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
 }
+document.querySelectorAll('.nav-item button').forEach((button) => {
+  button.addEventListener('click', () => {
+    const item = button.parentElement;
+    const open = item.classList.toggle('open');
+    button.setAttribute('aria-expanded', String(open));
+    document.querySelectorAll('.nav-item').forEach((other) => {
+      if (other !== item) { other.classList.remove('open'); other.querySelector('button').setAttribute('aria-expanded','false'); }
+    });
+  });
+});
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('.nav-item')) document.querySelectorAll('.nav-item').forEach((item) => item.classList.remove('open'));
+});
