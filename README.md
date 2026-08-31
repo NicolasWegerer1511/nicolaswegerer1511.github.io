@@ -1,19 +1,20 @@
 # Nicolas Wegerer Visuals Studio Website
 
-Website-Stand: **V13.0.1 Pro Creator OS**
+Website-Stand: **V14.0.1 Creator Pro**
 
 ## Plattformen
 - macOS
 - iPhone
 - iPad
 
-## V13.0.1
+## V14.0.1
 - Professional Visual Editor
-- Lightroom Workflow
+- Studio-Presets + eigene gespeicherte Presets
+- Lightroom Roundtrip
 - Instagram Activity Inbox
 - Content / Planner / Performance / Publishing
 - Datenschutz / Nutzungsbedingungen / Datenlöschung
-- Build-Fix synchron zur Universal-App
+- Build-Fix synchron zu iPhone, iPad und Mac Studio
 
 ## URLs
 - https://nicolaswegerer1511.github.io/
