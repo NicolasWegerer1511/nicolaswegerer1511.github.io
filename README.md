@@ -25,3 +25,6 @@ Website-Stand: **V16.0 Cloud Account**
 - https://nicolaswegerer1511.github.io/terms.html
 - https://nicolaswegerer1511.github.io/data-deletion.html
 - https://nicolaswegerer1511.github.io/imprint.html
+
+- Website live auf V16 aktualisiert
+- Datenschutz/AGB/Datenlöschung an iCloud + Sign in with Apple angepasst
