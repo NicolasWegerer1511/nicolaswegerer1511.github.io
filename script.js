@@ -13,12 +13,17 @@ if (!reduced) {
   document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
 }
 document.querySelectorAll('.nav-item button').forEach((button) => {
-  button.addEventListener('click', () => {
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
     const item = button.parentElement;
     const open = item.classList.toggle('open');
     button.setAttribute('aria-expanded', String(open));
     document.querySelectorAll('.nav-item').forEach((other) => {
-      if (other !== item) { other.classList.remove('open'); other.querySelector('button').setAttribute('aria-expanded','false'); }
+      if (other !== item) {
+        other.classList.remove('open');
+        other.querySelector('button')?.setAttribute('aria-expanded','false');
+      }
     });
   });
 });
@@ -28,14 +33,36 @@ document.addEventListener('click', (event) => {
 
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.navlinks');
-menuToggle?.addEventListener('click', () => {
-  const open = navLinks.classList.toggle('mobile-open');
-  menuToggle.setAttribute('aria-expanded', String(open));
+
+function setMobileMenu(open) {
+  navLinks?.classList.toggle('mobile-open', open);
+  menuToggle?.setAttribute('aria-expanded', String(open));
+  document.body.classList.toggle('menu-open', open);
+  if (!open) {
+    document.querySelectorAll('.nav-item').forEach((item) => {
+      item.classList.remove('open');
+      item.querySelector('button')?.setAttribute('aria-expanded','false');
+    });
+  }
+}
+
+menuToggle?.addEventListener('click', (event) => {
+  event.preventDefault();
+  event.stopPropagation();
+  setMobileMenu(!navLinks?.classList.contains('mobile-open'));
 });
-navLinks?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => {
-  navLinks.classList.remove('mobile-open');
-  menuToggle?.setAttribute('aria-expanded', 'false');
+
+navLinks?.querySelectorAll('.dropdown a, > a').forEach((link) => link.addEventListener('click', () => {
+  setMobileMenu(false);
 }));
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') setMobileMenu(false);
+});
+
+addEventListener('resize', () => {
+  if (innerWidth > 650) setMobileMenu(false);
+}, { passive: true });
 
 const labPhoto = document.querySelector('.lab-photo');
 const labLabel = document.querySelector('.lab-label');
