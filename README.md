@@ -1,42 +1,26 @@
 # Nicolas Wegerer Visuals Studio Website
 
-Website-Stand: **V16.5 Creator Polish**
+Website-Stand: **V17 Release Candidate**
 
 ## Plattformen
 - macOS
 - iPhone
 - iPad
 
-## V16.5
-- Sign in with Apple
-- Private CloudKit Sync für Mac, iPhone und iPad
-- iCloud Backups mit wählbarem Intervall
-- Lightroom öffnen + Share/Open-In Workflow
+## V17
+- Creator Workflow: Import → Bearbeiten → Lightroom → Caption → Preview → Planen / Veröffentlichen
+- Visual Editor Pro+ mit Smart Enhance, Favoriten, eigenen Presets und echten Format-Crops
+- Exportqualität im Editor
+- Instagram Activity Center
 - Canon CCAPI Workflow
 - DJI Media Hub
-- Performance-optimierter Visual Editor
-- Instagram Activity Inbox
-- Datenschutz: kein eigener Visuals-Studio-Datenspeicher-Server
-- Kontakt-Link mit vorausgefülltem Betreff
+- Lightroom Share/Open-In Workflow
+- Release Center auf iPhone, iPad und Mac
+- Personal-Team-Build bleibt ohne aktive CloudKit-Initialisierung stabil
+- Website und Apps parallel auf V17
 
-## URLs
-- https://nicolaswegerer1511.github.io/
-- https://nicolaswegerer1511.github.io/privacy.html
-- https://nicolaswegerer1511.github.io/terms.html
-- https://nicolaswegerer1511.github.io/data-deletion.html
-- https://nicolaswegerer1511.github.io/imprint.html
-
-- Website live auf V16.5 aktualisiert
-- Datenschutz/AGB/Datenlöschung an iCloud + Sign in with Apple angepasst
-
-
-## V16.5
-- 10 neue Trending-Presets
-- Preset-/Bearbeitungsstärke 0–100 %
-- Editor-Rendering entprellt für flüssigere Slider
-- Instagram Activity Mirror mit Filtern
-- schönere Inbox-Statusanzeige
-- Lightroom Workflow klarer strukturiert
-- Mac, iPhone, iPad und Website parallel auf V16.5
-
-- V16.5 Studio Experience RC: Creator Workflow, Smart Enhance, echte Crops, iPad Workspace, Mac Workflow
+## Datenschutz / externe Abhängigkeiten
+- Kein eigener Visuals-Studio-Datenspeicher-Server
+- Sign in with Apple und echtes iCloud/CloudKit benötigen Apple Developer Program
+- Instagram-Funktionen hängen von Meta-API-Rechten ab
+- Canon/DJI hängen von Modell, Firmware und verfügbaren APIs/SDKs ab
