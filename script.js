@@ -34,11 +34,19 @@ document.addEventListener('click', (event) => {
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.navlinks');
 
+let mobileScrollY = 0;
 function setMobileMenu(open) {
   navLinks?.classList.toggle('mobile-open', open);
   menuToggle?.setAttribute('aria-expanded', String(open));
-  document.body.classList.toggle('menu-open', open);
-  if (!open) {
+
+  if (open) {
+    mobileScrollY = window.scrollY;
+    document.body.classList.add('menu-open');
+    document.body.style.top = `-${mobileScrollY}px`;
+  } else {
+    document.body.classList.remove('menu-open');
+    document.body.style.top = '';
+    window.scrollTo(0, mobileScrollY);
     document.querySelectorAll('.nav-item').forEach((item) => {
       item.classList.remove('open');
       item.querySelector('button')?.setAttribute('aria-expanded','false');
