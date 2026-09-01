@@ -1,20 +1,23 @@
 # Nicolas Wegerer Visuals Studio Website
 
-Website-Stand: **V14.0.1 Creator Pro**
+Website-Stand: **V16.0 Cloud Account**
 
 ## Plattformen
 - macOS
 - iPhone
 - iPad
 
-## V14.0.1
-- Professional Visual Editor
-- Studio-Presets + eigene gespeicherte Presets
-- Lightroom Roundtrip
+## V16.0
+- Sign in with Apple
+- Private CloudKit Sync für Mac, iPhone und iPad
+- iCloud Backups mit wählbarem Intervall
+- Lightroom öffnen + Share/Open-In Workflow
+- Canon CCAPI Workflow
+- DJI Media Hub
+- Performance-optimierter Visual Editor
 - Instagram Activity Inbox
-- Content / Planner / Performance / Publishing
-- Datenschutz / Nutzungsbedingungen / Datenlöschung
-- Build-Fix synchron zu iPhone, iPad und Mac Studio
+- Datenschutz: kein eigener Visuals-Studio-Datenspeicher-Server
+- Kontakt-Link mit vorausgefülltem Betreff
 
 ## URLs
 - https://nicolaswegerer1511.github.io/
