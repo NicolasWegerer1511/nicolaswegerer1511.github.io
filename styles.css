@@ -177,3 +177,108 @@
 .device-compare-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:42px}.device-compare-card{position:relative;padding:28px;border:1px solid #252a35;border-radius:26px;background:linear-gradient(155deg,#12151d,#090b10);overflow:hidden}.device-compare-card.featured{border-color:#875fd766;background:radial-gradient(circle at 20% 0,#7549bc33,transparent 42%),linear-gradient(155deg,#151821,#090b10)}.device-card-top{display:flex;align-items:center;gap:16px;min-height:70px}.device-card-top>div{flex:1}.device-card-top small{color:#a77aff;font-size:10px;font-weight:800;letter-spacing:.14em}.device-card-top h3{font-size:20px;margin:5px 0}.device-card-top>b{position:absolute;right:16px;top:16px;padding:6px 9px;border-radius:999px;background:#8e65ee22;color:#b995ff;font-size:8px;letter-spacing:.1em}.device-symbol{position:relative;display:block;width:48px;height:42px;border:2px solid #656b79;border-radius:5px;box-shadow:inset 0 0 0 3px #0a0c11}.mac-symbol:after{content:"";position:absolute;width:24px;height:3px;left:10px;bottom:-8px;background:#656b79;border-radius:5px}.ipad-symbol{width:34px;height:46px;border-radius:6px}.iphone-symbol{width:25px;height:46px;border-radius:7px}.device-compare-card>p{min-height:72px;color:var(--muted);line-height:1.55;font-size:14px}.device-compare-card ul{list-style:none;padding:0;margin:22px 0 0;border-top:1px solid #20242e}.device-compare-card li{display:grid;grid-template-columns:24px 1fr;gap:8px;padding:15px 0;border-bottom:1px solid #20242e}.device-compare-card li i{color:#8fddba;font-style:normal}.device-compare-card li b,.device-compare-card li span{display:block}.device-compare-card li b{font-size:13px;margin-bottom:4px}.device-compare-card li span{color:#7f8491;font-size:11px;line-height:1.4}.integration-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}.integration-row article{display:flex;align-items:center;gap:16px;padding:18px 22px;border:1px solid #252a35;border-radius:18px;background:#0d1016}.integration-row article>span{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:#8d64ec22;color:#b692ff;font-weight:800}.integration-row article>div{flex:1}.integration-row small,.integration-row b{display:block}.integration-row small{font-size:9px;color:#777d89;letter-spacing:.12em}.integration-row b{font-size:14px;margin-top:4px}.integration-row em{color:#777d89;font-size:11px;font-style:normal}.table-wrap{display:none}
 @media(max-width:900px){.device-compare-grid{grid-template-columns:1fr}.device-compare-card>p{min-height:0}.integration-row{grid-template-columns:1fr}}
 @media(max-width:650px){.device-compare-grid{gap:12px;margin-top:28px}.device-compare-card{padding:22px}.integration-row article{align-items:flex-start;flex-wrap:wrap}.integration-row em{width:100%;padding-left:56px}}
+
+
+/* V16.0.1 iPhone Safari mobile menu hotfix */
+@media (max-width:650px){
+  .nav{
+    height:64px !important;
+    min-height:64px !important;
+    padding:0 16px !important;
+    overflow:visible !important;
+  }
+  .navlinks{
+    display:none !important;
+    position:fixed !important;
+    left:0 !important;
+    right:0 !important;
+    top:64px !important;
+    bottom:0 !important;
+    width:100vw !important;
+    height:auto !important;
+    max-height:none !important;
+    margin:0 !important;
+    padding:14px 14px calc(24px + env(safe-area-inset-bottom)) !important;
+    border:0 !important;
+    border-radius:0 !important;
+    background:#07080c !important;
+    overflow-y:auto !important;
+    overflow-x:hidden !important;
+    -webkit-overflow-scrolling:touch !important;
+    z-index:99999 !important;
+    gap:10px !important;
+    transform:none !important;
+  }
+  .navlinks.mobile-open{display:flex !important}
+  .nav-item{
+    width:100% !important;
+    margin:0 !important;
+    position:relative !important;
+    border:1px solid #222733 !important;
+    border-radius:16px !important;
+    background:#0d1016 !important;
+    overflow:hidden !important;
+  }
+  .nav-item>button{
+    min-height:58px !important;
+    padding:15px 16px !important;
+    color:#f5f5f7 !important;
+    font-size:16px !important;
+  }
+  .nav-item .dropdown,
+  .nav-item .dropdown.wide{
+    position:relative !important;
+    top:auto !important;
+    left:auto !important;
+    right:auto !important;
+    width:100% !important;
+    max-width:none !important;
+    min-width:0 !important;
+    margin:0 !important;
+    padding:0 10px !important;
+    border:0 !important;
+    border-radius:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    opacity:1 !important;
+    visibility:visible !important;
+    transform:none !important;
+    overflow:hidden !important;
+    display:block !important;
+    max-height:0 !important;
+  }
+  .nav-item.open .dropdown,
+  .nav-item.open .dropdown.wide{
+    max-height:560px !important;
+    padding:0 10px 12px !important;
+  }
+  .dropdown>small{
+    display:block !important;
+    padding:2px 8px 8px !important;
+  }
+  .dropdown>a{
+    display:block !important;
+    width:100% !important;
+    min-width:0 !important;
+    margin:0 0 6px !important;
+    padding:12px !important;
+    border-radius:12px !important;
+    background:#121620 !important;
+    white-space:normal !important;
+    overflow-wrap:anywhere !important;
+  }
+  .dropdown b,.dropdown em{
+    white-space:normal !important;
+    overflow-wrap:anywhere !important;
+  }
+  .dropdown em{display:block !important}
+  .navlinks>.pill{
+    width:100% !important;
+    margin:2px 0 0 !important;
+  }
+  body.menu-open{
+    overflow:hidden !important;
+    position:fixed !important;
+    width:100% !important;
+  }
+}
