@@ -294,3 +294,8 @@
 .distribution-grid article>span{display:grid;place-items:center;flex:0 0 48px;width:48px;height:48px;border-radius:15px;background:#1a1e29;color:#a878ff;font-size:20px}
 @media(max-width:900px){.cloud-grid{grid-template-columns:repeat(2,1fr)}.distribution-grid{grid-template-columns:1fr}}
 @media(max-width:650px){.cloud-section,.distribution{padding:75px 22px}.cloud-grid{grid-template-columns:1fr}.cloud-grid article{min-height:0}}
+
+/* V16.5 studio experience */
+#v165 .cloud-icon{font-size:13px;font-weight:800;letter-spacing:.04em}
+#v165 .cloud-grid article{transition:transform .25s ease,border-color .25s ease}
+#v165 .cloud-grid article:hover{transform:translateY(-4px);border-color:rgba(167,120,255,.35)}
