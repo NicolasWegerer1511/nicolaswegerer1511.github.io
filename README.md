@@ -1,6 +1,6 @@
 # Nicolas Wegerer Visuals Studio Website
 
-Website-Stand: **V16.0 Cloud Account**
+Website-Stand: **V16.1 Creator Polish**
 
 ## Plattformen
 - macOS
@@ -28,3 +28,13 @@ Website-Stand: **V16.0 Cloud Account**
 
 - Website live auf V16 aktualisiert
 - Datenschutz/AGB/Datenlöschung an iCloud + Sign in with Apple angepasst
+
+
+## V16.1
+- 10 neue Trending-Presets
+- Preset-/Bearbeitungsstärke 0–100 %
+- Editor-Rendering entprellt für flüssigere Slider
+- Instagram Activity Mirror mit Filtern
+- schönere Inbox-Statusanzeige
+- Lightroom Workflow klarer strukturiert
+- Mac, iPhone, iPad und Website parallel auf V16.1
