@@ -6,7 +6,135 @@
   <title>Nicolas Wegerer Visuals Studio</title>
   <meta name="description" content="Visuals Studio verbindet Bildbearbeitung, Planung, Instagram und Performance auf Mac, iPhone und iPad.">
   <link rel="icon" href="app-icon.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=1602">
+
+  <style>
+  /* V16.0.2 MOBILE MENU INLINE FIX */
+  @media (max-width:650px){
+    html,body{max-width:100%;overflow-x:hidden}
+    .nav{position:sticky!important;top:0!important;z-index:2147483000!important}
+    .navlinks{
+      display:none!important;
+      position:fixed!important;
+      inset:64px 0 0 0!important;
+      width:auto!important;
+      height:auto!important;
+      max-width:none!important;
+      max-height:none!important;
+      padding:12px 14px calc(22px + env(safe-area-inset-bottom))!important;
+      margin:0!important;
+      overflow-y:auto!important;
+      overflow-x:hidden!important;
+      background:#07080c!important;
+      border:0!important;
+      border-radius:0!important;
+      box-shadow:none!important;
+      transform:none!important;
+      z-index:2147482999!important;
+      flex-direction:column!important;
+      align-items:stretch!important;
+      gap:9px!important;
+    }
+    .navlinks.mobile-open{display:flex!important}
+    .nav-item{
+      position:static!important;
+      width:100%!important;
+      min-width:0!important;
+      max-width:100%!important;
+      margin:0!important;
+      border:1px solid rgba(255,255,255,.09)!important;
+      border-radius:16px!important;
+      background:#0d1016!important;
+      overflow:hidden!important;
+      box-sizing:border-box!important;
+    }
+    .nav-item>button{
+      position:relative!important;
+      width:100%!important;
+      min-height:56px!important;
+      margin:0!important;
+      padding:15px 16px!important;
+      display:flex!important;
+      align-items:center!important;
+      justify-content:space-between!important;
+      border:0!important;
+      color:#f5f5f7!important;
+      background:transparent!important;
+      font-size:16px!important;
+      font-weight:700!important;
+      text-align:left!important;
+      box-sizing:border-box!important;
+    }
+    .nav-item .dropdown,
+    .nav-item .dropdown.wide{
+      position:static!important;
+      inset:auto!important;
+      top:auto!important;
+      right:auto!important;
+      bottom:auto!important;
+      left:auto!important;
+      float:none!important;
+      width:100%!important;
+      min-width:0!important;
+      max-width:100%!important;
+      height:auto!important;
+      margin:0!important;
+      padding:0!important;
+      display:none!important;
+      grid-template-columns:1fr!important;
+      opacity:1!important;
+      visibility:visible!important;
+      transform:none!important;
+      translate:none!important;
+      border:0!important;
+      border-radius:0!important;
+      background:transparent!important;
+      box-shadow:none!important;
+      overflow:visible!important;
+      box-sizing:border-box!important;
+    }
+    .nav-item.open .dropdown,
+    .nav-item.open .dropdown.wide{
+      display:block!important;
+      max-height:none!important;
+      padding:0 10px 10px!important;
+    }
+    .dropdown>small{
+      display:block!important;
+      margin:0!important;
+      padding:3px 8px 9px!important;
+      color:#747a89!important;
+      font-size:9px!important;
+      letter-spacing:.14em!important;
+    }
+    .dropdown>a{
+      position:static!important;
+      width:100%!important;
+      max-width:100%!important;
+      min-height:0!important;
+      margin:0 0 7px!important;
+      padding:12px 13px!important;
+      display:block!important;
+      border:1px solid rgba(255,255,255,.05)!important;
+      border-radius:12px!important;
+      background:#121620!important;
+      box-sizing:border-box!important;
+      color:#fff!important;
+      white-space:normal!important;
+      overflow:visible!important;
+    }
+    .dropdown b{display:block!important;font-size:14px!important;line-height:1.25!important}
+    .dropdown em{
+      display:block!important;
+      margin-top:3px!important;
+      color:#858b98!important;
+      font-size:12px!important;
+      line-height:1.35!important;
+      white-space:normal!important;
+    }
+    .navlinks>.pill{width:100%!important;box-sizing:border-box!important;margin:1px 0 0!important}
+  }
+  </style>
 </head>
 <body>
   <nav class="nav"><a class="brand" href="#top"><img src="nw-visuals-logo-v2.webp" alt="Nicolas Wegerer Visuals"></a><button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span></button><div class="navlinks">
@@ -97,6 +225,6 @@
   </main>
 
   <footer><img src="nw-visuals-logo-v2.webp" alt="Nicolas Wegerer Visuals"><div><a href="imprint.html">Impressum</a><a href="privacy.html">Datenschutz</a><a href="data-deletion.html">Datenlöschung</a><a href="https://instagram.com/nicolaswegerer.visuals">Instagram</a></div><p>© 2026 Nicolas Wegerer Visuals. Alle Rechte vorbehalten.</p></footer>
-  <script src="script.js"></script>
+  <script src="script.js?v=1602"></script>
 </body>
 </html>
