@@ -8,6 +8,11 @@ Website-Stand: **V18.6 Pro Workflow**
 - iPad
 - WidgetKit Widgets
 
+## Veröffentlichung
+- Kein öffentlicher Direktdownload über die Website
+- Keine öffentliche DMG-/PKG- oder TestFlight-Verteilung
+- Spätere Veröffentlichung ausschließlich über den Apple App Store und Mac App Store
+
 ## V18.6
 - Creator Workflow: Import → Studio Editor → Lightroom → Caption → Preview → Planen / Veröffentlichen
 - **Studio Editor** als einheitliche Bezeichnung auf iPhone, iPad, Mac und Website
