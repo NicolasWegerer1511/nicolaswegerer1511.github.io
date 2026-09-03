@@ -3,430 +3,86 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Nicolas Wegerer Visuals Studio</title>
-  <meta name="description" content="Visuals Studio verbindet Bildbearbeitung, Planung, Instagram und Performance auf Mac, iPhone und iPad.">
+  <meta name="theme-color" content="#05060a">
+  <title>NW Visuals Studio 19.6.2</title>
+  <meta name="description" content="NW Visuals Studio 19.6.2 verbindet Planung, Bildbearbeitung, Kamera-Import, Veröffentlichung und Auswertung auf Mac, iPhone und iPad.">
   <link rel="icon" href="app-icon.png">
-  <link rel="stylesheet" href="styles.css?v=1860">
-
-  <style>
-  /* V18.6 MOBILE MENU INLINE FIX */
-  @media (max-width:650px){
-    html,body{max-width:100%;overflow-x:hidden}
-    .nav{position:sticky!important;top:0!important;z-index:2147483000!important}
-    .navlinks{
-      display:none!important;
-      position:fixed!important;
-      inset:64px 0 0 0!important;
-      width:auto!important;
-      height:auto!important;
-      max-width:none!important;
-      max-height:none!important;
-      padding:12px 14px calc(22px + env(safe-area-inset-bottom))!important;
-      margin:0!important;
-      overflow-y:auto!important;
-      overflow-x:hidden!important;
-      background:#07080c!important;
-      border:0!important;
-      border-radius:0!important;
-      box-shadow:none!important;
-      transform:none!important;
-      z-index:2147482999!important;
-      flex-direction:column!important;
-      align-items:stretch!important;
-      gap:9px!important;
-    }
-    .navlinks.mobile-open{display:flex!important}
-    .nav-item{
-      position:static!important;
-      width:100%!important;
-      min-width:0!important;
-      max-width:100%!important;
-      margin:0!important;
-      border:1px solid rgba(255,255,255,.09)!important;
-      border-radius:16px!important;
-      background:#0d1016!important;
-      overflow:hidden!important;
-      box-sizing:border-box!important;
-    }
-    .nav-item>button{
-      position:relative!important;
-      width:100%!important;
-      min-height:56px!important;
-      margin:0!important;
-      padding:15px 16px!important;
-      display:flex!important;
-      align-items:center!important;
-      justify-content:space-between!important;
-      border:0!important;
-      color:#f5f5f7!important;
-      background:transparent!important;
-      font-size:16px!important;
-      font-weight:700!important;
-      text-align:left!important;
-      box-sizing:border-box!important;
-    }
-    .nav-item .dropdown,
-    .nav-item .dropdown.wide{
-      position:static!important;
-      inset:auto!important;
-      top:auto!important;
-      right:auto!important;
-      bottom:auto!important;
-      left:auto!important;
-      float:none!important;
-      width:100%!important;
-      min-width:0!important;
-      max-width:100%!important;
-      height:auto!important;
-      margin:0!important;
-      padding:0!important;
-      display:none!important;
-      grid-template-columns:1fr!important;
-      opacity:1!important;
-      visibility:visible!important;
-      transform:none!important;
-      translate:none!important;
-      border:0!important;
-      border-radius:0!important;
-      background:transparent!important;
-      box-shadow:none!important;
-      overflow:visible!important;
-      box-sizing:border-box!important;
-    }
-    .nav-item.open .dropdown,
-    .nav-item.open .dropdown.wide{
-      display:block!important;
-      max-height:none!important;
-      padding:0 10px 10px!important;
-    }
-    .dropdown>small{
-      display:block!important;
-      margin:0!important;
-      padding:3px 8px 9px!important;
-      color:#747a89!important;
-      font-size:9px!important;
-      letter-spacing:.14em!important;
-    }
-    .dropdown>a{
-      position:static!important;
-      width:100%!important;
-      max-width:100%!important;
-      min-height:0!important;
-      margin:0 0 7px!important;
-      padding:12px 13px!important;
-      display:block!important;
-      border:1px solid rgba(255,255,255,.05)!important;
-      border-radius:12px!important;
-      background:#121620!important;
-      box-sizing:border-box!important;
-      color:#fff!important;
-      white-space:normal!important;
-      overflow:visible!important;
-    }
-    .dropdown b{display:block!important;font-size:14px!important;line-height:1.25!important}
-    .dropdown em{
-      display:block!important;
-      margin-top:3px!important;
-      color:#858b98!important;
-      font-size:12px!important;
-      line-height:1.35!important;
-      white-space:normal!important;
-    }
-    .navlinks>.pill{width:100%!important;box-sizing:border-box!important;margin:1px 0 0!important}
-  }
-  </style>
-
-  <style>
-  /* V18.6 SAFARI MENU REBUILD */
-  @media (max-width:650px){
-    .nav{
-      position:sticky!important;
-      top:0!important;
-      width:100%!important;
-      max-width:none!important;
-      height:76px!important;
-      padding:0 18px!important;
-      margin:0!important;
-      background:#050609!important;
-      border-bottom:1px solid rgba(255,255,255,.07)!important;
-      overflow:visible!important;
-      z-index:9999!important;
-    }
-    .brand{display:flex!important;align-items:center!important;height:76px!important}
-    .brand img{width:142px!important;max-height:64px!important;object-fit:contain!important}
-    .menu-toggle{z-index:10001!important}
-
-    .navlinks,
-    .navlinks.mobile-open{
-      position:absolute!important;
-      top:76px!important;
-      left:0!important;
-      right:auto!important;
-      bottom:auto!important;
-      width:100vw!important;
-      height:calc(100dvh - 76px)!important;
-      max-height:calc(100dvh - 76px)!important;
-      margin:0!important;
-      padding:14px 16px calc(28px + env(safe-area-inset-bottom))!important;
-      background:#07080c!important;
-      overflow-y:auto!important;
-      overflow-x:hidden!important;
-      border:0!important;
-      border-radius:0!important;
-      box-shadow:none!important;
-      transform:none!important;
-      opacity:1!important;
-      visibility:visible!important;
-      z-index:10000!important;
-      box-sizing:border-box!important;
-    }
-    .navlinks{display:none!important}
-    .navlinks.mobile-open{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:10px!important}
-
-    .nav-item{
-      display:block!important;
-      position:static!important;
-      flex:none!important;
-      width:100%!important;
-      height:auto!important;
-      min-height:58px!important;
-      max-width:100%!important;
-      margin:0!important;
-      padding:0!important;
-      background:#0e1117!important;
-      border:1px solid #252a35!important;
-      border-radius:18px!important;
-      overflow:hidden!important;
-      box-sizing:border-box!important;
-    }
-    .nav-item>button{
-      display:flex!important;
-      width:100%!important;
-      height:58px!important;
-      min-height:58px!important;
-      padding:0 17px!important;
-      margin:0!important;
-      align-items:center!important;
-      justify-content:space-between!important;
-      color:#f3f4f7!important;
-      font-size:16px!important;
-      font-weight:720!important;
-      line-height:1!important;
-      background:transparent!important;
-      border:0!important;
-      box-sizing:border-box!important;
-    }
-    .nav-item>button span{color:#a878ff!important;font-size:16px!important}
-
-    .nav-item .dropdown,
-    .nav-item .dropdown.wide{
-      display:none!important;
-      position:static!important;
-      width:100%!important;
-      height:auto!important;
-      min-width:0!important;
-      max-width:100%!important;
-      max-height:none!important;
-      margin:0!important;
-      padding:0 10px 10px!important;
-      background:transparent!important;
-      border:0!important;
-      border-radius:0!important;
-      box-shadow:none!important;
-      opacity:1!important;
-      visibility:visible!important;
-      transform:none!important;
-      overflow:visible!important;
-      box-sizing:border-box!important;
-    }
-    .nav-item.open .dropdown,
-    .nav-item.open .dropdown.wide{display:block!important}
-
-    .dropdown>small{
-      display:block!important;
-      padding:2px 8px 8px!important;
-      color:#6f7582!important;
-      font-size:9px!important;
-      letter-spacing:.13em!important;
-    }
-    .dropdown>a{
-      display:block!important;
-      width:100%!important;
-      margin:0 0 7px!important;
-      padding:12px 13px!important;
-      background:#141821!important;
-      border:1px solid rgba(255,255,255,.05)!important;
-      border-radius:13px!important;
-      box-sizing:border-box!important;
-      color:#fff!important;
-    }
-    .dropdown b{display:block!important;font-size:14px!important;line-height:1.25!important}
-    .dropdown em{display:block!important;margin-top:4px!important;color:#8a909c!important;font-size:12px!important;line-height:1.35!important}
-
-    .navlinks>.pill{
-      display:flex!important;
-      flex:none!important;
-      width:100%!important;
-      min-height:50px!important;
-      margin:2px 0 0!important;
-      box-sizing:border-box!important;
-    }
-
-    body.menu-open{
-      position:static!important;
-      top:auto!important;
-      width:auto!important;
-      overflow:hidden!important;
-    }
-  }
-  </style>
+  <link rel="stylesheet" href="styles.css?v=1962">
 </head>
 <body>
-  <nav class="nav"><a class="brand" href="#top"><img src="nw-visuals-logo-v2.webp" alt="Nicolas Wegerer Visuals"></a><button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span></button><div class="navlinks">
-    <div class="nav-item"><button type="button" aria-expanded="false">Studio <span>⌄</span></button><div class="dropdown"><small>VISUALS STUDIO</small><a href="#studio"><b>Überblick</b><em>Der komplette Workflow</em></a><a href="#workflow-info"><b>So arbeitet die App</b><em>Vom Import bis zur Auswertung</em></a><a href="#geraete"><b>Mac, iPhone & iPad</b><em>Auf jedem Gerät passend</em></a></div></div>
-    <div class="nav-item"><button type="button" aria-expanded="false">Funktionen <span>⌄</span></button><div class="dropdown wide"><small>FUNKTIONEN</small><a href="#editor"><b>Visual Editor</b><em>Presets, Looks und Lightroom</em></a><a href="#cloud"><b>Konto & iCloud</b><em>Login, Sync und Backups</em></a><a href="#creator"><b>Smart Creator</b><em>Caption und Hashtags vorbereiten</em></a><a href="#planner"><b>Content-Planer</b><em>Beiträge visuell organisieren</em></a><a href="#inbox"><b>Inbox & Performance</b><em>Instagram-Aktivitäten und Reichweite</em></a><a href="#dji"><b>DJI Media</b><em>Drohnen- und Action-Cam-Import</em></a></div></div>
-    <div class="nav-item"><button type="button" aria-expanded="false">Entdecken <span>⌄</span></button><div class="dropdown"><small>MEHR ENTDECKEN</small><a href="#neu"><b>V18.6 Pro Workflow</b><em>Creator OS & Release Center</em></a><a href="#cloud"><b>Cloud & Backup</b><em>Private iCloud-Synchronisierung</em></a><a href="#canon"><b>Canon Workflow</b><em>WLAN-Import via CCAPI</em></a><a href="#dji"><b>DJI Workflow</b><em>Drohnen & Action Cams</em></a><a href="#distribution"><b>Installation</b><em>Mac, iPhone & iPad verteilen</em></a><a href="#vergleich"><b>Gerätevergleich</b><em>Mac, iPhone und iPad</em></a><a href="#faq"><b>Fragen & Antworten</b><em>Alles Wichtige kompakt</em></a></div></div><a class="pill pill-light" href="mailto:Nicolas.Wegerer@web.de?subject=Visuals%20Studio%20Kontakt%20V18.6">Kontakt</a>
-  </div></nav>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Hauptnavigation">
+      <a class="brand" href="#top" aria-label="NW Visuals Startseite"><img src="nw-visuals-logo-v2.webp" alt="NW Visuals"></a>
+      <button class="menu-toggle" type="button" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span></button>
+      <div class="navlinks">
+        <div class="nav-item"><button type="button" aria-expanded="false">Produkt <span>⌄</span></button><div class="dropdown"><a href="#workflow"><b>Workflow</b><small>Vom Import bis zur Auswertung</small></a><a href="#editor"><b>Studio Editor</b><small>Looks, Presets und Feinschliff</small></a><a href="#devices"><b>Alle Geräte</b><small>Mac, iPhone und iPad</small></a></div></div>
+        <div class="nav-item"><button type="button" aria-expanded="false">Integrationen <span>⌄</span></button><div class="dropdown"><a href="#camera"><b>Canon & DJI</b><small>Medien direkt übernehmen</small></a><a href="#cloud"><b>iCloud</b><small>Synchron und privat</small></a><a href="#publish"><b>Lightroom & Instagram</b><small>Durchgängiger Publishing-Flow</small></a></div></div>
+        <a href="#features">Funktionen</a><a href="#faq">FAQ</a>
+        <a class="nav-cta" href="#availability">App-Store-Info</a>
+      </div>
+    </nav>
+  </header>
 
   <main id="top">
-    <section class="hero reveal">
-      <div class="eyebrow">VISUALS STUDIO V18.6 · MAC · IPHONE · IPAD</div>
-      <h1>Aus einer Idee wird<br><span>großartiger Content.</span></h1>
-      <p class="lead">Importieren, bearbeiten, Lightroom einbinden, Canon- und DJI-Medien übernehmen, Instagram-Aktivitäten verfolgen, Captions vorbereiten und Inhalte planen – in einem Creator Workflow auf Mac, iPhone und iPad.</p>
-      <div class="hero-actions"><a class="pill pill-primary" href="#studio">Studio entdecken</a><a class="text-link" href="#funktionen">Alle Funktionen <b>›</b></a></div>
-      <div class="stage" aria-label="Animierte Vorschau von Visuals Studio">
+    <section class="hero wrap">
+      <div class="hero-copy reveal">
+        <div class="release"><i></i> Neu: Softwarestand 19.6.2</div>
+        <h1>Dein Content.<br><span>Ein Studio.</span></h1>
+        <p>Planen, aufnehmen, bearbeiten und auswerten – in einem verbundenen Workflow für Mac, iPhone und iPad.</p>
+        <div class="hero-actions"><a class="button primary" href="#workflow">19.6.2 entdecken</a><a class="button ghost" href="#availability">Verfügbarkeit</a></div>
+        <div class="hero-proof"><span>✓ Keine öffentlichen Downloads</span><span>✓ Später im Apple App Store</span></div>
+      </div>
+      <div class="hero-stage reveal" aria-label="Animierte Vorschau der App">
         <div class="glow"></div>
-        <div class="mac">
-          <div class="macbar"><i></i><i></i><i></i><span>Visuals Studio</span></div>
-          <div class="macbody">
-            <aside><img src="app-icon.png" alt=""><b>Übersicht</b><span>Content</span><span>Bearbeiten</span><span>Inbox</span><span>Planer</span><span>Performance</span></aside>
-            <div class="dashboard"><small>GUTEN TAG, NICOLAS</small><h2>Alles im Blick.</h2><div class="metric-row"><article><span>Reichweite</span><strong>24,8 K</strong><em>+18 %</em></article><article><span>Interaktion</span><strong>4,9 %</strong><em>+0,8 %</em></article><article><span>Geplant</span><strong>03</strong><em>Diese Woche</em></article></div><div class="graph"><span>PERFORMANCE</span><svg viewBox="0 0 700 190" preserveAspectRatio="none"><defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9b6cff" stop-opacity=".45"/><stop offset="1" stop-color="#9b6cff" stop-opacity="0"/></linearGradient></defs><path class="area" d="M0 155 C80 148 100 95 175 118 S270 132 330 80 S430 94 490 53 S600 78 700 22 L700 190 L0 190Z"/><path class="line" d="M0 155 C80 148 100 95 175 118 S270 132 330 80 S430 94 490 53 S600 78 700 22"/></svg></div></div>
+        <div class="mac-frame">
+          <div class="mac-bar"><i></i><i></i><i></i><b>NW Visuals Studio</b><span>19.6.2</span></div>
+          <div class="mac-app">
+            <aside><strong>NW</strong><a class="active">Übersicht</a><a>Planer</a><a>Studio Editor</a><a>Bibliothek</a><a>Insights</a></aside>
+            <div class="dashboard"><div class="dash-head"><div><small>GUTEN MORGEN</small><h3>Creator Dashboard</h3></div><button>+ Neuer Inhalt</button></div><div class="metric-row"><article><small>NÄCHSTER POST</small><b>Heute · 18:30</b><span>Behind the Scenes</span></article><article><small>REICHWEITE</small><b>+24,8 %</b><span>letzte 30 Tage</span></article><article><small>SYNC</small><b>Aktuell</b><span>3 Geräte</span></article></div><div class="content-row"><div class="preview-card"><div class="preview-image"><span>NW</span></div><div><small>IN BEARBEITUNG</small><b>Golden Hour Collection</b><em>Canon · 24 Dateien</em></div></div><div class="activity"><small>WORKFLOW</small><p><i class="done"></i> Import abgeschlossen</p><p><i class="live"></i> Studio Look anwenden</p><p><i></i> Beitrag planen</p></div></div></div>
           </div>
         </div>
-        <div class="floating-card fc-left"><span>Heute veröffentlichen</span><b>19:00</b><small>Beste Aktivität</small></div>
-        <div class="floating-card fc-right"><span>Neue Aktivität</span><b>12 Likes</b><small>vor 2 Minuten</small></div>
-      </div>
-      <div class="hero-note">Ein Studio. Ein Workflow. Auf allen deinen Geräten.</div>
-    </section>
-
-    <section class="new-v14 reveal" id="neu"><div class="section-heading"><div class="eyebrow">VISUALS STUDIO V18.6 · PRO WORKFLOW</div><h2>Mehr Kontrolle.<br><span>Weniger Unterbrechungen.</span></h2><p>V18.6 bündelt Creator Workflow, Visual Editor Pro+, Lightroom, Canon, DJI, Instagram Activity Center und Planung in einer deutlich aufgeräumteren Creator-OS-Oberfläche für Mac, iPhone und iPad.</p></div><div class="new-grid"><article><b>20+</b><h3>Studio-Presets</h3><p>Neue moderne Looks wie Clean Editorial, Night Drive, Warm Film, Matte Luxury, Travel Pop und Cinematic Teal.</p></article><article><b>100%</b><h3>Look-Stärke</h3><p>Preset- und Bearbeitungsintensität stufenlos anpassen und eigene Looks weiterhin speichern.</p></article><article><b>LR</b><h3>Lightroom Workflow</h3><p>Lightroom öffnen, Bild per iOS-Share-Sheet senden und die bearbeitete Datei anschließend wieder in Visuals Studio übernehmen.</p></article><article><b>◎</b><h3>Activity Mirror</h3><p>Instagram-Aktivitäten nach Likes, Kommentaren, Followern und Systemereignissen filtern und übersichtlich verfolgen.</p></article></div></section>
-
-    <section class="preset-lab reveal" id="preset-lab"><div class="section-heading"><div class="eyebrow">INTERAKTIVE VORSCHAU</div><h2>Finde deinen Look.<br><span>Direkt ausprobieren.</span></h2><p>Wähle einen Preset-Stil und verändere Licht, Wärme und Kontrast. Die Demo zeigt, wie schnell aus einem Foto ein konsistenter Visuals-Look wird.</p></div><div class="lab-shell"><div class="lab-photo" data-preset="clean"><div class="lab-sky"></div><div class="lab-mountain"></div><div class="lab-sun"></div><span class="lab-label">CLEAN</span></div><div class="lab-controls"><div class="preset-buttons" role="group" aria-label="Preset auswählen"><button class="active" data-preset="clean">Clean</button><button data-preset="moody">Moody</button><button data-preset="film">Film</button><button data-preset="custom">Custom</button></div><label><span>Belichtung <output id="exposureValue">+0.20</output></span><input id="exposure" type="range" min="-50" max="50" value="20"></label><label><span>Wärme <output id="warmthValue">+12</output></span><input id="warmth" type="range" min="-50" max="50" value="12"></label><label><span>Kontrast <output id="contrastValue">+8</output></span><input id="contrast" type="range" min="-50" max="50" value="8"></label><small>Interaktive Website-Demo – keine echte Bildbearbeitung.</small></div></div></section>
-
-    
-    <section class="cloud-section reveal" id="cloud">
-      <div class="section-heading">
-        <div class="eyebrow">KONTO · ICLOUD · BACKUP</div>
-        <h2>Ein Konto.<br><span>Alle Geräte auf demselben Stand.</span></h2>
-        <p>Mit Apple anmelden, Studio-Daten privat über iCloud synchronisieren und automatische Backups mit eigenem Intervall erstellen.</p>
-      </div>
-      <div class="cloud-grid">
-        <article><div class="cloud-icon"></div><h3>Mit Apple anmelden</h3><p>Kein eigenes Visuals-Studio-Passwort und kein separater Login-Server. Anmeldung direkt über deine Apple-ID.</p></article>
-        <article><div class="cloud-icon">☁︎</div><h3>Private iCloud Sync</h3><p>Planer, Entwürfe, gespeicherte Personen und Studio-Einstellungen zwischen Mac, iPhone und iPad synchronisieren.</p></article>
-        <article><div class="cloud-icon">↻</div><h3>Automatische Backups</h3><p>Backup-Intervall frei wählen: beim App-Start, stündlich, täglich oder wöchentlich – plus manuelles Backup und Restore.</p></article>
-        <article><div class="cloud-icon">⌁</div><h3>Privacy by Design</h3><p>Visuals Studio betreibt keinen eigenen Datenspeicher-Server. Ohne iCloud bleiben Studio-Daten lokal auf deinem Gerät.</p></article>
+        <div class="phone-frame"><div class="phone-top"></div><div class="phone-screen"><small>HEUTE</small><h4>Content Plan</h4><div class="mobile-photo"><span>18:30</span></div><b>Golden Hour</b><p>Instagram · Feed</p><button>Öffnen</button></div></div>
+        <div class="float-chip chip-one"><i>↓</i><span><small>CANON IMPORT</small><b>24 Fotos bereit</b></span></div>
+        <div class="float-chip chip-two"><i>✓</i><span><small>ICLOUD SYNC</small><b>Alles aktuell</b></span></div>
       </div>
     </section>
 
-    <section class="canon reveal" id="canon"><div class="canon-copy"><span class="dev-badge">BETA IN V18.6</span><div class="eyebrow">CANON CAMERA WORKFLOW</div><h2>Von der Kamera<br><span>direkt in den Plan.</span></h2><p>V18.6 integriert einen Canon Camera Hub: kompatible Canon-Kameras lassen sich über WLAN und Canon CCAPI verbinden. Ordner und JPEG-Aufnahmen können direkt in Visuals Studio geladen und anschließend im Visual Editor weiterbearbeitet werden.</p><ol><li><b>Kamera verbinden</b><span>Kompatibles Canon-Modell über WLAN und CCAPI verbinden.</span></li><li><b>Aufnahmen auswählen</b><span>Kamera-Mediathek öffnen und gewünschte JPEG-Aufnahme auswählen.</span></li><li><b>Look vorbereiten</b><span>Preset anwenden oder den Lightroom-Workflow starten.</span></li><li><b>Im Plan platzieren</b><span>Motiv einem Beitrag und Termin zuordnen.</span></li></ol><p class="fineprint">Beta-Funktion in V18.6. Kompatibilität hängt vom Kameramodell, der Firmware und einer aktivierten Canon-CCAPI-Funktion ab. Für RAW-Dateien steht weiterhin der Datei-/Canon-Workflow zur Verfügung.</p></div><div class="camera-flow" aria-label="Animation des geplanten Canon-Imports"><div class="camera-card"><div class="camera-shape"><i></i><b>Canon</b></div><span>EOS Kamera</span><small>Bereit zum Verbinden</small></div><div class="signal"><i></i><i></i><i></i><b>WLAN</b></div><div class="import-card"><div class="import-photo"></div><p><b>Aufnahme wird importiert</b><span><i></i></span><small>IMG_2841 · Vorschau</small></p></div><div class="plan-card"><span>DO · 19:00</span><b>Neuer Beitrag</b><small>Im Content-Plan vorgemerkt</small></div></div></section>
+    <section class="trustbar"><div class="wrap"><span>Studio Editor</span><i></i><span>Canon Quick Connect</span><i></i><span>DJI Media</span><i></i><span>iCloud & CloudKit</span><i></i><span>Lightroom Workflow</span><i></i><span>Instagram Insights</span></div></section>
 
-    <section class="new-v14 reveal" id="dji"><div class="section-heading"><div class="eyebrow">DJI MEDIA WORKFLOW</div><h2>Drohne oder Action Cam.<br><span>Direkt in den Editor.</span></h2><p>Medien aus DJI Fly, DJI Mimo, Fotos, Dateien oder Speicherkarte können direkt in Visuals Studio übernommen werden. Für offiziell unterstützte Drohnen ist die Architektur für DJI Mobile SDK vorbereitet; direkte SDK-Steuerung benötigt einen DJI Developer App Key.</p></div><div class="new-grid"><article><b>FLY</b><h3>DJI Fly</h3><p>Exportierte Drohnenaufnahmen direkt in den Visual Editor übernehmen.</p></article><article><b>MIMO</b><h3>DJI Mimo</h3><p>Action-Cam- und Osmo-Medien aus DJI Mimo weiterverarbeiten.</p></article><article><b>SD</b><h3>Dateien & Speicherkarte</h3><p>Medien über Dateien, Kartenleser oder externe Datenträger importieren.</p></article><article><b>SDK</b><h3>DJI SDK vorbereitet</h3><p>Architektur für unterstützte Modelle und künftige Developer-Key-Anbindung.</p></article></div></section>
-    <section class="new-v14 reveal" id="v186-release">
-      <div class="section-heading">
-        <div class="eyebrow">VISUALS STUDIO V18.6 · PRO WORKFLOW</div>
-        <h2>Creator OS.<br><span>Vom Import bis zum fertigen Content.</span></h2>
-        <p>V18.6 führt die wichtigsten Schritte jetzt als durchgängigen Creator Workflow zusammen und ergänzt ein Release Center für Status, App-Bereitschaft und externe Abhängigkeiten.</p>
-      </div>
-      <div class="new-grid">
-        <article><b>01→06</b><h3>Creator Workflow</h3><p>Import → Bearbeiten → Lightroom → Caption → Preview → Planen / Veröffentlichen.</p></article>
-        <article><b>PRO+</b><h3>Visual Editor</h3><p>Smart Enhance, Favoriten, eigene Presets, echte Format-Crops, Drehen, Spiegeln und Exportqualität.</p></article>
-        <article><b>LINK</b><h3>Connected Studio</h3><p>Instagram, Lightroom, Canon und DJI innerhalb einer gemeinsamen Studio-Struktur.</p></article>
-        <article><b>RC</b><h3>Release Center</h3><p>Status, Plattform-Bereitschaft, Signing und externe Abhängigkeiten transparent im Blick.</p></article>
-      </div>
-    </section>
-<section class="intro reveal" id="studio"><div class="eyebrow">SO FUNKTIONIERT ES</div><h2>Vom Foto zum fertigen Post.<br><span>Ohne Umwege.</span></h2><p>Visuals Studio führt Bildimport, Bearbeitung, Presets, Lightroom-Übergabe, Caption, Planung, Instagram-Aktivitäten und Auswertung in einer Oberfläche zusammen. Die animierten Ansichten zeigen den gesamten Ablauf.</p></section>
-
-    <section class="info-strip reveal" id="workflow-info"><article><strong>01</strong><div><b>Importieren</b><span>Fotos auf Mac, iPhone oder iPad auswählen.</span></div></article><i>→</i><article><strong>02</strong><div><b>Bearbeiten</b><span>Presets anwenden, eigene Looks speichern oder Lightroom nutzen.</span></div></article><i>→</i><article><strong>03</strong><div><b>Vorbereiten</b><span>Caption, Hashtags und Instagram-Vorschau prüfen.</span></div></article><i>→</i><article><strong>04</strong><div><b>Planen</b><span>Zeitpunkt wählen und Performance verfolgen.</span></div></article></section>
-
-    <section class="story" id="funktionen">
-      <article class="story-row reveal" id="editor">
-        <div class="story-copy"><span class="number">01</span><div class="eyebrow">CONTENT STUDIO</div><h2>Dein Bild.<br><span>Dein Look.</span></h2><p>Bearbeite Bilder mit Studio-Presets oder deinen eigenen gespeicherten Presets. Belichtung, Lichter, Tiefen, Wärme, Tönung, Schärfe, Klarheit, Vignette und Körnung bleiben direkt im Publishing-Workflow.</p><ul><li>10 Studio-Presets + eigene Presets</li><li>Feine Licht-, Farb- und Detailkontrolle</li><li>Lightroom Roundtrip via Teilen + Open-In</li></ul></div>
-        <div class="demo editor-demo"><div class="demo-head"><span>Visual Editor</span><small>Live-Vorschau</small></div><div class="photo"><div class="before">ORIGINAL</div><div class="after">VISUALS LOOK</div><div class="wipe"></div><div class="photo-mark">NW</div></div><div class="controls"><label>Belichtung <i><b style="width:66%"></b></i><em>+0.35</em></label><label>Kontrast <i><b style="width:54%"></b></i><em>+12</em></label><label>Sättigung <i><b style="width:72%"></b></i><em>+8</em></label></div></div>
-      </article>
-
-      <article class="story-row reverse reveal" id="creator">
-        <div class="story-copy"><span class="number">02</span><div class="eyebrow">SMART CREATOR</div><h2>Worte, die zum<br><span>Motiv passen.</span></h2><p>Bereite Caption und Hashtags direkt am Bild vor. Alles bleibt editierbar, bevor dein Beitrag in die Planung geht.</p><ul><li>Caption-Entwürfe passend zum Motiv</li><li>Hashtag-Sammlungen organisieren</li><li>Vorschau im Instagram-Format</li></ul></div>
-        <div class="demo composer-demo"><div class="post-preview"><div class="post-top"><img src="app-icon.png" alt=""><b>nicolaswegerer.visuals</b><span>•••</span></div><div class="post-image"><span>Chasing light.</span></div><div class="post-actions">♡　⌁　➤</div><p><b>nicolaswegerer.visuals</b> Zwischen Licht, Linie und Bewegung entsteht der Moment.</p></div><div class="caption-card"><small>CAPTION-VORSCHLAG</small><p class="typing">Zwischen Licht, Linie und Bewegung entsteht der Moment.</p><div><span>#visualstory</span><span>#creativeworkflow</span><span>#shotoniphone</span></div></div></div>
-      </article>
-
-      <article class="story-row reveal" id="planner">
-        <div class="story-copy"><span class="number">03</span><div class="eyebrow">PLANER</div><h2>Der richtige Post.<br><span>Zur richtigen Zeit.</span></h2><p>Plane deine Woche visuell, verschiebe Beiträge und erkenne freie Tage auf einen Blick. Visuals Studio empfiehlt passende Veröffentlichungszeiten.</p><ul><li>Übersichtlicher Wochenkalender</li><li>Drag-and-drop auf dem Mac</li><li>Optimale Uhrzeit im Blick</li></ul></div>
-        <div class="demo planner-demo"><div class="week"><div><b>MO</b><small>14</small></div><div><b>DI</b><small>15</small></div><div class="active"><b>MI</b><small>16</small></div><div><b>DO</b><small>17</small></div><div><b>FR</b><small>18</small></div></div><div class="schedule"><div class="time">18:00</div><div class="planned"><span class="thumb"></span><p><b>Neuer Beitrag</b><small>Light & Motion · Geplant</small></p><em>18:30</em></div><div class="time">20:00</div><div class="recommend">✦ Beste Aktivität heute: <b>19:00 Uhr</b></div></div></div>
-      </article>
-
-      <article class="story-row reverse reveal" id="inbox">
-        <div class="story-copy"><span class="number">04</span><div class="eyebrow">INBOX & PERFORMANCE</div><h2>Reaktionen sehen.<br><span>Wachstum verstehen.</span></h2><p>Behalte neue Instagram-Aktivitäten und die Entwicklung deiner Inhalte in einer übersichtlichen Ansicht.</p><ul><li>Likes, Kommentare und Follower im Blick · Swipe-Aktionen</li><li>Top-Beiträge schneller erkennen</li><li>Reichweite verständlich dargestellt</li></ul></div>
-        <div class="demo inbox-demo"><div class="inbox-head"><h3>Aktivität</h3><span>3 neu</span></div><div class="notification"><i>♥</i><p><b>12 neue Likes</b><small>Dein letzter Beitrag kommt gut an.</small></p><em>Jetzt</em></div><div class="notification"><i>✦</i><p><b>Neue Bestleistung</b><small>+28 % mehr Reichweite als üblich.</small></p><em>8 Min.</em></div><div class="notification"><i>↗</i><p><b>Follower-Wachstum</b><small>Diese Woche +42 neue Konten.</small></p><em>Heute</em></div></div>
-      </article>
-    </section>
-
-    <section class="details reveal"><div class="details-head"><div class="eyebrow">MEHR ALS NUR EIN PLANER</div><h2>Alle Werkzeuge.<br><span>Eine klare Oberfläche.</span></h2><p>Jeder Bereich ist auf einen konkreten Schritt im Content-Alltag ausgelegt. So findest du schneller, was du gerade brauchst.</p></div><div class="detail-grid">
-      <article><i>◐</i><h3>Trending Presets & eigene Looks</h3><p>V18.6 bringt neue Looks für Editorial, Automotive, Night, Film, Travel und Cinematic. Die Bearbeitungsstärke lässt sich stufenlos von 0 bis 100 % regeln.</p><div class="preset-run"><span>Editorial</span><span>Night</span><span>Film</span><span>Custom +</span></div></article>
-      <article><i>LR</i><h3>Lightroom Direktstart</h3><p>Lightroom direkt aus Visuals Studio öffnen. Ist die App nicht installiert, führt der Button zum App Store. Bildübergabe und Rückweg laufen über Apples Share-/Open-In-System.</p><div class="flow-mini"><b>Visuals Studio</b><em>→</em><b>Lightroom</b><em>↔</em><b>Editor</b></div></article>
-      <article><i>⌁</i><h3>Gerätegerechtes Layout</h3><p>Große Seitenleiste am Mac und iPad, kompakte Navigation auf dem iPhone – plus Wischgesten, Pinch-to-Zoom, Originalvergleich und Swipe-Aktionen.</p><div class="size-bars"><b></b><b></b><b></b></div></article>
-      <article><i>◎</i><h3>Instagram Activity Mirror</h3><p>Neue API-Aktivitäten werden übersichtlich nach Likes, Kommentaren, Followern und Systemereignissen gefiltert. Auto-Refresh, letzte Prüfung und ungelesene Einträge sind direkt sichtbar.</p><div class="pulse-row"><span></span><b>Neue Aktivität erkannt</b></div></article>
-      <article><i>▦</i><h3>Content-Bibliothek</h3><p>Entwürfe, geplante Inhalte und bereits veröffentlichte Beiträge bleiben übersichtlich sortiert und wieder auffindbar.</p><div class="library-mini"><span></span><span></span><span></span><span></span></div></article>
-      <article><i>↗</i><h3>Performance verstehen</h3><p>Erkenne auf einen Blick, welche Inhalte funktionieren und wie sich Reichweite und Interaktionen entwickeln.</p><div class="spark"><b></b><b></b><b></b><b></b><b></b><b></b></div></article>
-    </div></section>
-
-    
-    <section class="distribution reveal" id="distribution">
-      <div class="section-heading">
-        <div class="eyebrow">PERFORMANCE · APP STORE</div>
-        <h2>Schneller arbeiten.<br><span>Sicher über Apple beziehen.</span></h2>
-        <p>V18.6 optimiert die Bildvorschau für flüssigeres Arbeiten. Die spätere Veröffentlichung ist ausschließlich über Apples offizielle App Stores geplant.</p>
-      </div>
-      <div class="distribution-grid">
-        <article><span>⚡</span><div><h3>Schneller Visual Editor</h3><p>Regler arbeiten mit einer optimierten Vorschau statt bei jeder Bewegung die komplette Kameraauflösung neu zu rendern.</p></div></article>
-        <article><span>⌘</span><div><h3>Mac Installation</h3><p>Die Mac-App wird später ausschließlich über den Mac App Store bereitgestellt. Ein öffentlicher Direktdownload ist nicht vorgesehen.</p></div></article>
-        <article><span></span><div><h3>iPhone & iPad</h3><p>Die iPhone- und iPad-App wird später ausschließlich über den Apple App Store erhältlich sein.</p></div></article>
+    <section class="compact-section wrap" id="workflow">
+      <div class="section-title reveal"><div><small>DER WORKFLOW</small><h2>Von der Aufnahme bis zum Post.<br><span>Ohne Medienbruch.</span></h2></div><p>19.6.2 bringt die wichtigsten Arbeitsschritte enger zusammen. Du wechselst nicht zwischen unzähligen Werkzeugen, sondern bewegst dein Projekt durch einen klaren Ablauf.</p></div>
+      <div class="workflow-shell reveal">
+        <div class="workflow-tabs" role="tablist"><button class="active" data-flow="import">01 Import</button><button data-flow="edit">02 Bearbeiten</button><button data-flow="plan">03 Planen</button><button data-flow="measure">04 Auswerten</button></div>
+        <div class="workflow-demo" data-state="import">
+          <div class="flow-copy"><small id="flowEyebrow">CANON · DJI · DATEIEN</small><h3 id="flowTitle">Medien direkt ins Projekt.</h3><p id="flowText">Verbinde eine unterstützte Canon Kamera, übernimm DJI-Aufnahmen oder wähle lokale Dateien. Visuals Studio ordnet sie direkt dem passenden Projekt zu.</p><ul id="flowList"><li>Kamera und Quelle auswählen</li><li>Vorschau prüfen und Favoriten markieren</li><li>Metadaten strukturiert übernehmen</li></ul></div>
+          <div class="flow-visual"><div class="source camera-source"><span>CAM</span><b>Canon EOS</b><small>Verbunden</small></div><div class="transfer"><i></i><i></i><i></i></div><div class="target-card"><small>NEUES PROJEKT</small><div class="thumb-grid"><i></i><i></i><i></i><i></i></div><b>Golden Hour</b><span>24 Medien · importiert</span></div></div>
+        </div>
       </div>
     </section>
 
-    
-<section class="cloud-section reveal" id="v186-workflow">
-  <div class="section-heading">
-    <div class="eyebrow">VISUALS STUDIO V18.6 · PRO WORKFLOW</div>
-    <h2>Größerer Schritt.<br><span>Klarerer Workflow.</span></h2>
-    <p>V18.6 verbindet Import, Bearbeitung, Lightroom, Caption, Instagram-Vorschau und Planung in einem durchgängigen Creator Workflow.</p>
-  </div>
-  <div class="cloud-grid">
-    <article><div class="cloud-icon">01</div><h3>Creator Workflow</h3><p>Sechs klare Schritte vom Rohmaterial bis zum geplanten oder veröffentlichten Post.</p></article>
-    <article><div class="cloud-icon">✦</div><h3>Editor Pro+</h3><p>Smart Enhance, Favoriten, eigene Presets, Copy/Paste der Bearbeitung und echte Format-Crops.</p></article>
-    <article><div class="cloud-icon">▣</div><h3>iPad Workspace</h3><p>Sidebar und Detailansicht mit direktem Zugriff auf Workflow, Canon, DJI, Inbox, Planer und Performance.</p></article>
-    <article><div class="cloud-icon">⌘</div><h3>Mac Studio</h3><p>Creator Workflow und Smart Enhance sind jetzt auch im Desktop-Studio integriert.</p></article>
-  </div>
-</section>
-<section class="ecosystem reveal" id="geraete"><div class="eyebrow">EIN VERBUNDENES STUDIO</div><h2>Auf dem Mac entwickelt.<br><span>Überall dabei.</span></h2><p>Groß planen am Mac. Schnell bearbeiten am iPad. Ideen und Aktivitäten unterwegs auf dem iPhone prüfen.</p><div class="device-stage"><div class="device laptop"><div class="device-screen"><span>MAC</span><b>Das komplette Studio.</b></div></div><div class="device tablet"><div class="device-screen"><span>IPAD</span><b>Kreativ und flexibel.</b></div></div><div class="device mobile"><div class="device-screen"><span>IPHONE</span><b>Immer dabei.</b></div></div></div><div class="platforms"><span>macOS · SwiftUI</span><span>iPadOS · Adaptive Layouts</span><span>iOS · Mobile Companion</span></div></section>
-
-    <section class="comparison reveal" id="vergleich">
-      <div class="section-heading"><div class="eyebrow">GERÄTEVERGLEICH</div><h2>Drei Geräte.<br><span>Ein gemeinsamer Workflow.</span></h2><p>Visuals Studio zeigt auf jedem Gerät genau die Werkzeuge, die dort sinnvoll sind – großzügig am Mac, flexibel am iPad und schnell erreichbar auf dem iPhone.</p></div>
-      <div class="device-compare-grid">
-        <article class="device-compare-card featured"><div class="device-card-top"><span class="device-symbol mac-symbol"></span><div><small>MAC</small><h3>Das komplette Studio.</h3></div><b>HAUPTARBEITSPLATZ</b></div><p>Für umfangreiche Bearbeitung, Wochenplanung und die komplette Übersicht über deine Inhalte.</p><ul><li><i>✓</i><span><b>Bildeditor</b>Große Vollansicht mit Presets und Reglern</span></li><li><i>✓</i><span><b>Content-Planung</b>Komplette Wochenübersicht</span></li><li><i>✓</i><span><b>Performance</b>Auswertung auf einen Blick</span></li></ul></article>
-        <article class="device-compare-card"><div class="device-card-top"><span class="device-symbol ipad-symbol"></span><div><small>IPAD</small><h3>Kreativ und flexibel.</h3></div></div><p>Ideal für die direkte Touch-Bearbeitung und mobile Planung mit mehr Arbeitsfläche.</p><ul><li><i>✓</i><span><b>Touch-Editor</b>Presets und Anpassungen direkt bedienen</span></li><li><i>✓</i><span><b>Flexible Planung</b>Beiträge unterwegs vorbereiten</span></li><li><i>✓</i><span><b>Lightroom</b>Teilen und Open-In Workflow</span></li></ul></article>
-        <article class="device-compare-card"><div class="device-card-top"><span class="device-symbol iphone-symbol"></span><div><small>IPHONE</small><h3>Schnell unterwegs.</h3></div></div><p>Für spontane Ideen, kompakte Bearbeitung und den schnellen Blick auf Aktivitäten.</p><ul><li><i>✓</i><span><b>Mobile Bearbeitung</b>Kompakte Werkzeuge und Presets</span></li><li><i>✓</i><span><b>Aktivitäten</b>Reaktionen und Neuigkeiten prüfen</span></li><li><i>✓</i><span><b>Caption & Hashtags</b>Beiträge unterwegs vorbereiten</span></li></ul></article>
+    <section class="feature-bento wrap" id="features">
+      <div class="section-title reveal"><div><small>VISUALS STUDIO 19.6.2</small><h2>Mehr Überblick.<br><span>Weniger Reibung.</span></h2></div><p>Die zentralen Werkzeuge sind dichter organisiert, schneller erreichbar und über alle Geräte hinweg verständlich aufgebaut.</p></div>
+      <div class="bento">
+        <article class="bento-large editor-card reveal" id="editor"><div class="card-copy"><small>STUDIO EDITOR</small><h3>Dein Look, präzise gesteuert.</h3><p>Presets, Licht, Farbe, Kontrast und Zuschnitt in einer fokussierten Oberfläche. Eigene Looks lassen sich sichern und im gesamten Workflow wiederverwenden.</p><div class="tags"><span>Presets</span><span>RAW-Workflow</span><span>Lightroom</span></div></div><div class="mini-editor"><div class="edit-photo" data-look="natural"><span>NATURAL</span></div><div class="look-switch"><button class="active" data-look="natural">Natural</button><button data-look="warm">Warm</button><button data-look="mono">Mono</button></div><label>Licht <input type="range" min="70" max="125" value="100" id="demoLight"></label></div></article>
+        <article class="bento-small cloud-card reveal" id="cloud"><div class="cloud-orbit"><span class="cloud-center">☁</span><i class="device-dot d1">Mac</i><i class="device-dot d2">iPhone</i><i class="device-dot d3">iPad</i></div><small>PRIVATE ICLOUD SYNC</small><h3>Ein Stand. Auf jedem Gerät.</h3><p>Pläne, Presets und Projektinformationen bleiben über iCloud und CloudKit synchron.</p></article>
+        <article class="bento-small insight-card reveal"><div class="spark"><i style="height:34%"></i><i style="height:48%"></i><i style="height:42%"></i><i style="height:68%"></i><i style="height:60%"></i><i style="height:88%"></i><i style="height:76%"></i></div><small>PERFORMANCE</small><h3>Erkennen, was wirkt.</h3><p>Aktivität, Reichweite und Inhalte kompakt vergleichen, statt nur Zahlen zu sammeln.</p><b>+24,8 % <span>Reichweite</span></b></article>
+        <article class="bento-wide planner-card reveal" id="publish"><div class="card-copy"><small>CREATOR PLAN</small><h3>Idee, Bearbeitung und Veröffentlichung an einem Ort.</h3><p>Halte Content-Ideen fest, verknüpfe Medien, plane Termine und begleite den Status bis zur Auswertung.</p></div><div class="timeline"><div><b>09:00</b><span><i class="purple"></i>Idee & Briefing</span></div><div><b>14:30</b><span><i class="blue"></i>Studio Editor</span></div><div class="current"><b>18:30</b><span><i class="green"></i>Veröffentlichung</span></div></div></article>
       </div>
-      <div class="integration-row"><article><span>LR</span><div><small>LIGHTROOM WORKFLOW</small><b>Teilen & Open-In</b></div><em>Mac · iPad · iPhone</em></article><article><span>⌁</span><div><small>CANON CCAPI</small><b>WLAN-Import · Beta</b></div><em>Kompatibles Modell erforderlich</em></article></div>
     </section>
 
-    <section class="faq reveal" id="faq"><div class="section-heading"><div class="eyebrow">FRAGEN & ANTWORTEN</div><h2>Gut zu wissen.</h2></div><div class="faq-list"><details><summary>Was ist Visuals Studio?</summary><p>Eine Creator-App, die Bildbearbeitung, Presets, Textvorbereitung, Content-Planung, Instagram-Aktivitäten und Auswertung in einem Workflow zusammenführt.</p></details><details><summary>Auf welchen Geräten läuft die App?</summary><p>Visuals Studio wird für Mac, iPhone und iPad entwickelt. Die Oberfläche passt sich an die jeweilige Bildschirmgröße und Bedienung an.</p></details><details><summary>Kann ich eigene Presets speichern?</summary><p>Ja. Zusätzlich zu den neuen Trending-Presets lassen sich eigene Looks speichern, wiederverwenden und löschen. In V18.6 kann außerdem die gesamte Bearbeitungsstärke von 0 bis 100 % angepasst werden.</p></details><details><summary>Funktioniert Lightroom bereits vollständig?</summary><p>V18.6 besitzt einen direkten Lightroom-Button. Ist Lightroom installiert, wird die App geöffnet; andernfalls öffnet Visuals Studio den App Store. Für die Bildübergabe verwendet V18.6 Apples Teilen-/Open-In-System, weil iOS ohne dokumentierte Adobe-Import-URL keinen unsichtbaren Direktimport in eine fremde App erlaubt.</p></details><details><summary>Kann ich eine Canon-Kamera direkt verbinden?</summary><p>V18.6 enthält einen Canon-CCAPI-Beta-Workflow über WLAN. Unterstützte Kameras können verbunden und JPEGs direkt importiert werden; Kompatibilität und verfügbare Funktionen hängen vom Canon-Modell und der Firmware ab.</p></details><details><summary>Was ist mit DJI Drohnen und Action Cams?</summary><p>DJI-Medien lassen sich über DJI Fly, DJI Mimo, Fotos, Dateien oder Speicherkarte in Visuals Studio übernehmen. Für offiziell unterstützte Drohnen ist eine spätere DJI-SDK-Anbindung vorbereitet.</p></details><details><summary>Wie funktionieren iCloud-Backups?</summary><p>V18.6 kann Studio-Daten in der privaten iCloud-Datenbank sichern. Das Intervall lässt sich auf App-Start, stündlich, täglich oder wöchentlich stellen; zusätzlich gibt es manuelles Backup und Wiederherstellung.</p></details><details><summary>Kann ich die Apps ohne Xcode installieren?</summary><p>Nein. Es wird keinen öffentlichen Direktdownload geben. Die Mac-, iPhone- und iPad-Versionen sollen später ausschließlich über den jeweiligen Apple App Store erhältlich sein.</p></details><details><summary>Wie werden meine Daten gespeichert?</summary><p>Visuals Studio betreibt keinen eigenen Datenspeicher-Server. Ohne aktivierten iCloud-Sync bleiben Studio-Daten lokal auf dem Gerät. Mit aktiviertem Sync oder Backup werden ausgewählte Studio-Daten ausschließlich in der privaten iCloud-Datenbank des jeweiligen Apple-Accounts gespeichert.</p></details><details><summary>Kann ich die App schon herunterladen?</summary><p>Nein. Auf dieser Website wird es keinen öffentlichen Download geben. Visuals Studio soll später ausschließlich über den Apple App Store beziehungsweise den Mac App Store erhältlich sein.</p></details></div></section>
+    <section class="camera-section" id="camera"><div class="wrap camera-grid"><div class="camera-copy reveal"><small>DIREKTER MEDIEN-WORKFLOW</small><h2>Von Canon und DJI<br><span>direkt weiterarbeiten.</span></h2><p>Importiere Aufnahmen in den passenden Arbeitsbereich, prüfe sie in der Vorschau und starte ohne Umweg mit Auswahl, Bearbeitung oder Planung.</p><div class="integration-list"><article><i>C</i><div><b>Canon Quick Connect</b><span>Geführte Verbindung und Bildübernahme für unterstützte EOS-Modelle.</span></div></article><article><i>D</i><div><b>DJI Media Center</b><span>Workflows für DJI Fly, GO, GO 4 und Mimo sowie Datei- und Speicherkartenimport.</span></div></article><article><i>Lr</i><div><b>Lightroom Workflow</b><span>Ausgewählte Medien strukturiert an Lightroom weitergeben und zurückführen.</span></div></article></div></div><div class="import-visual reveal"><div class="camera-device"><div class="lens"><i></i></div><b>EOS</b></div><div class="beam"><span></span></div><div class="import-window"><div class="window-top"><i></i><i></i><i></i><b>Medien importieren</b></div><div class="import-grid"><i class="selected"></i><i></i><i class="selected"></i><i></i><i></i><i class="selected"></i></div><div class="import-progress"><span></span><b>18 von 24</b></div></div></div></div></section>
 
-    <section class="privacy reveal"><div class="lock">⌾</div><div><div class="eyebrow">PRIVACY BY DESIGN</div><h2>Dein Content bleibt deiner.</h2><p>Visuals Studio betreibt keinen eigenen Datenspeicher-Server. Ohne iCloud bleiben Studio-Daten lokal. Bei aktiviertem iCloud-Sync oder Backup liegen ausgewählte Studio-Daten in deiner privaten iCloud-Datenbank.</p></div></section>
+    <section class="devices wrap" id="devices">
+      <div class="section-title reveal"><div><small>DREI GERÄTE · EIN SYSTEM</small><h2>Für jede Situation<br><span>die richtige Oberfläche.</span></h2></div><p>Die Geräte erfüllen unterschiedliche Aufgaben – und arbeiten trotzdem mit demselben Projektstand.</p></div>
+      <div class="device-grid reveal"><article class="featured"><div class="device-icon mac-icon"></div><small>MAC</small><h3>Das vollständige Studio</h3><p>Große Arbeitsfläche für Organisation, Studio Editor, Bibliothek, Planung und detaillierte Auswertung.</p><ul><li>Umfangreicher Projektüberblick</li><li>Präzise Bearbeitung</li><li>Canon- und DJI-Import</li></ul></article><article><div class="device-icon ipad-icon"></div><small>IPAD</small><h3>Kreativ und flexibel</h3><p>Mehr Raum für visuelle Auswahl, Bearbeitung und Planung – ideal unterwegs oder im Studio.</p><ul><li>Touch-optimierter Workflow</li><li>Projekt- und Medienübersicht</li><li>iCloud-Synchronisierung</li></ul></article><article><div class="device-icon phone-icon"></div><small>IPHONE</small><h3>Schnell griffbereit</h3><p>Ideen festhalten, nächsten Content prüfen, Aktivität sehen und wichtige Aufgaben unterwegs erledigen.</p><ul><li>Kompakter Tagesüberblick</li><li>Widgets und Kurzinfos</li><li>Mobile Medienübernahme</li></ul></article></div>
+    </section>
 
-    <section class="final reveal"><img src="app-icon.png" alt="Visuals Studio App Icon"><div class="eyebrow">NICOLAS WEGERER VISUALS STUDIO</div><h2>Ein besserer Workflow<br>beginnt mit einer Idee.</h2><p>Visuals Studio wird fortlaufend für Mac, iPhone und iPad weiterentwickelt.</p><a class="pill pill-primary" href="mailto:Nicolas.Wegerer@web.de?subject=Visuals%20Studio%20Kontakt%20V18.6">Kontakt aufnehmen</a></section>
+    <section class="availability wrap reveal" id="availability"><div><small>VERFÜGBARKEIT</small><h2>Für den Apple App Store vorbereitet.</h2><p>NW Visuals Studio wird nicht als öffentlicher Direktdownload angeboten. Die geplante Veröffentlichung erfolgt später ausschließlich über Apples offizielle Stores.</p></div><div class="store-cards"><article><span></span><div><small>GEPLANT FÜR</small><b>Mac App Store</b></div></article><article><span></span><div><small>GEPLANT FÜR</small><b>App Store</b></div></article></div></section>
+
+    <section class="faq wrap" id="faq"><div class="section-title reveal"><div><small>GUT ZU WISSEN</small><h2>Häufige Fragen.</h2></div></div><div class="faq-grid reveal"><details open><summary>Was ist neu an Version 19.6.2?<span>+</span></summary><p>19.6.2 steht für den aktuellen, verfeinerten Studio-Workflow: zentrale Bereiche sind klarer verbunden, Geräteaufgaben sauber getrennt und Import, Bearbeitung, Planung sowie Auswertung enger zusammengedacht.</p></details><details><summary>Gibt es einen öffentlichen Download?<span>+</span></summary><p>Nein. Es wird keinen öffentlichen Direktdownload über diese Website geben. Eine spätere Veröffentlichung ist ausschließlich über den Mac App Store beziehungsweise den App Store vorgesehen.</p></details><details><summary>Welche Geräte werden unterstützt?<span>+</span></summary><p>Visuals Studio ist als gemeinsames System für Mac, iPhone und iPad konzipiert. Der Mac bietet das vollständige Studio; iPad und iPhone ergänzen den Workflow mit angepassten Oberflächen.</p></details><details><summary>Wie werden meine Daten behandelt?<span>+</span></summary><p>Die Website ist statisch aufgebaut. Für die App sind Apple-Technologien wie iCloud und CloudKit vorgesehen. Weitere Einzelheiten findest du in der Datenschutzerklärung.</p></details></div></section>
   </main>
 
-  <footer><img src="nw-visuals-logo-v2.webp" alt="Nicolas Wegerer Visuals"><div><a href="imprint.html">Impressum</a><a href="privacy.html">Datenschutz</a><a href="data-deletion.html">Datenlöschung</a><a href="https://instagram.com/nicolaswegerer.visuals">Instagram</a></div><p>© 2026 Nicolas Wegerer Visuals. Alle Rechte vorbehalten.</p></footer>
-  <script src="script.js?v=1700"></script>
+  <footer><div class="wrap footer-grid"><div><img src="nw-visuals-logo-v2.webp" alt="NW Visuals"><p>Ein verbundener Creator-Workflow für Mac, iPhone und iPad.</p><small>Softwarestand 19.6.2</small></div><div><b>Produkt</b><a href="#workflow">Workflow</a><a href="#features">Funktionen</a><a href="#devices">Geräte</a><a href="#availability">Verfügbarkeit</a></div><div><b>Rechtliches</b><a href="imprint.html">Impressum</a><a href="privacy.html">Datenschutz</a><a href="terms.html">Nutzungsbedingungen</a><a href="data-deletion.html">Datenlöschung</a></div><div><b>Kontakt</b><a href="mailto:Nicolas.Wegerer@web.de?subject=NW%20Visuals%20Studio%2019.6.2">Nicolas.Wegerer@web.de</a><span>NW Visuals</span><span>Senden, Deutschland</span></div></div><div class="footer-bottom wrap"><span>© 2026 Nicolas Wegerer, handelnd unter NW Visuals</span><span>Unabhängiges Projekt · Nicht von Apple, Canon, DJI, Meta oder Adobe betrieben oder unterstützt.</span></div></footer>
+  <script src="script.js?v=1962"></script>
 </body>
 </html>
