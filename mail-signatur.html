@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>NW Visuals – Mail-Signatur</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#f4f5f7;color:#17191f;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}.wrap{width:min(720px,calc(100% - 28px));margin:28px auto 48px}.head{margin-bottom:20px}.head h1{margin:0 0 7px;font-size:25px}.head p{margin:0;color:#626773;line-height:1.5}.card{margin:16px 0;padding:20px;background:#fff;border:1px solid #dddfe4;border-radius:16px;box-shadow:0 8px 28px rgba(20,25,35,.06)}.card h2{margin:0 0 16px;font-size:18px}.signature{padding:16px;border:1px solid #eceef1;border-radius:12px;background:#fff}.signature img{display:block;width:240px;max-width:100%;height:auto;margin:0 0 10px}.sigtext{font:14px/1.48 Arial,sans-serif;color:#272a31}.sigtext strong{font-size:16px}.sigtext .label{color:#8b6c38;font-size:12px;font-weight:700;letter-spacing:.8px}.sigtext a{color:#3d4654;text-decoration:none}.legal{font-size:11px;color:#777c87}.copy{width:100%;margin-top:14px;padding:13px 16px;border:0;border-radius:11px;background:#17191f;color:white;font-size:15px;font-weight:700}.copy:active{transform:scale(.99)}.status{min-height:20px;margin:9px 0 0;text-align:center;color:#287a4b;font-size:13px;font-weight:600}.steps{margin-top:22px;padding:0 3px;color:#4f5560;line-height:1.55}.steps strong{color:#20232a}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="head"><h1>NW Visuals Mail-Signaturen</h1><p>Gewünschte Signatur kopieren und anschließend in den Mail-Einstellungen des iPhones einfügen.</p></header>
+    <section class="card">
+      <h2>info@nwvisuals.de</h2>
+      <div class="signature" id="info-signature">
+        <img src="https://www.nwvisuals.de/nw-visuals-signatur.jpg" width="240" alt="Nicolas Wegerer Visuals">
+        <div class="sigtext">Freundliche Grüße<br><br><strong>Nicolas Wegerer</strong><br><span class="label">NW VISUALS</span><br><br><a href="mailto:info@nwvisuals.de">info@nwvisuals.de</a><br><a href="https://www.nwvisuals.de">www.nwvisuals.de</a><br>Alemannenstraße 10 · 89250 Senden<br><br><span class="legal">Nicolas Wegerer, handelnd unter NW Visuals</span></div>
+      </div>
+      <button class="copy" type="button" data-target="info-signature">Info-Signatur kopieren</button><p class="status" aria-live="polite"></p>
+    </section>
+    <section class="card">
+      <h2>support@nwvisuals.de</h2>
+      <div class="signature" id="support-signature">
+        <img src="https://www.nwvisuals.de/nw-visuals-signatur.jpg" width="240" alt="Nicolas Wegerer Visuals">
+        <div class="sigtext">Freundliche Grüße<br><br><strong>Ihr NW Visuals Support-Team</strong><br><span class="label">SERVICE &amp; UNTERSTÜTZUNG</span><br><br><a href="mailto:support@nwvisuals.de">support@nwvisuals.de</a><br><a href="https://www.nwvisuals.de">www.nwvisuals.de</a><br>Alemannenstraße 10 · 89250 Senden<br><br><span class="legal">Nicolas Wegerer, handelnd unter NW Visuals</span></div>
+      </div>
+      <button class="copy" type="button" data-target="support-signature">Support-Signatur kopieren</button><p class="status" aria-live="polite"></p>
+    </section>
+    <p class="steps"><strong>Danach am iPhone:</strong> Einstellungen → Apps → Mail → Signatur → „Pro Account“ → in das passende Feld tippen und „Einsetzen“ wählen.</p>
+  </main>
+  <script>
+    document.querySelectorAll('.copy').forEach(button=>button.addEventListener('click',async()=>{
+      const signature=document.getElementById(button.dataset.target);
+      const status=button.nextElementSibling;
+      const html=signature.innerHTML;
+      const text=signature.innerText;
+      try{
+        if(window.ClipboardItem&&navigator.clipboard?.write){
+          await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([html],{type:'text/html'}),'text/plain':new Blob([text],{type:'text/plain'})})]);
+        }else{
+          const range=document.createRange();range.selectNodeContents(signature);const selection=getSelection();selection.removeAllRanges();selection.addRange(range);document.execCommand('copy');selection.removeAllRanges();
+        }
+        status.textContent='Signatur wurde kopiert.';
+      }catch(error){status.textContent='Bitte die Signatur oben gedrückt halten und manuell kopieren.'}
+    }));
+  </script>
+</body>
+</html>
