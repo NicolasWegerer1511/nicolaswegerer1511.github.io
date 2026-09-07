@@ -61,7 +61,7 @@
   else installStudioBranding();
 
   const core=document.createElement('script');
-  core.src='script-core.js?v=203-full';
+  core.src='script-core.js?v=210-full';
   core.defer=true;
   document.head.appendChild(core);
 })();
