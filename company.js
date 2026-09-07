@@ -25,7 +25,7 @@ function installNWVisualsBranding(){
   if(projectCopy&&!projectCopy.querySelector('.nw-project-logo')){
     const logo=document.createElement('img');
     logo.className='nw-project-logo';
-    logo.src='projects/visuals-studio/visuals-studio-brand.webp';
+    logo.src='projects/visuals-studio/visuals-studio-brand.svg';
     logo.alt='Visuals Studio';
     const status=projectCopy.querySelector('.project-status');
     status?.insertAdjacentElement('afterend',logo);
