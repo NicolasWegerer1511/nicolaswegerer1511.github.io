@@ -1,7 +1,7 @@
 (() => {
   const installStudioBranding = () => {
     document.querySelectorAll('img[src="nw-visuals-logo-v2.webp"]').forEach(img=>{
-      img.src='visuals-studio-brand.webp';
+      img.src='visuals-studio-brand.svg';
       img.alt='Visuals Studio';
       img.classList.add('visuals-studio-brand');
     });
@@ -19,7 +19,7 @@
     if(heroCopy&&!heroCopy.querySelector('.studio-hero-logo')){
       const logo=document.createElement('img');
       logo.className='studio-hero-logo';
-      logo.src='visuals-studio-brand.webp';
+      logo.src='visuals-studio-brand.svg';
       logo.alt='Visuals Studio';
       heroCopy.prepend(logo);
     }
