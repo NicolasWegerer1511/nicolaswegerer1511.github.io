@@ -1,67 +1,19 @@
-(() => {
-  const installStudioBranding = () => {
-    document.querySelectorAll('img[src="nw-visuals-logo-v2.webp"]').forEach(img=>{
-      img.src='visuals-studio-brand-dark.webp';
-      img.alt='Visuals Studio';
-      img.classList.add('visuals-studio-brand');
-    });
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reveals=document.querySelectorAll('.reveal');
+if(reduced){reveals.forEach(el=>el.classList.add('visible'));}else{const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.12,rootMargin:'0px 0px -30px'});reveals.forEach(el=>observer.observe(el));}
 
-    const navlinks=document.querySelector('.navlinks');
-    if(navlinks&&!navlinks.querySelector('.studio-home-link')){
-      const home=document.createElement('a');
-      home.className='studio-home-link';
-      home.href='/';
-      home.innerHTML='<span aria-hidden="true">⌂</span> Home';
-      navlinks.prepend(home);
-    }
+const menu=document.querySelector('.menu'),links=document.querySelector('.links');
+menu?.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));document.body.style.overflow=open?'hidden':'';});
+document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu?.setAttribute('aria-expanded','false');document.body.style.overflow='';}));
 
-    const heroCopy=document.querySelector('.hero-copy');
-    if(heroCopy&&!heroCopy.querySelector('.studio-hero-logo')){
-      const logo=document.createElement('img');
-      logo.className='studio-hero-logo';
-      logo.src='visuals-studio-brand-dark.webp';
-      logo.alt='Visuals Studio';
-      heroCopy.prepend(logo);
-    }
+const stepData={de:{capture:{eyebrow:'CANON · DJI · DATEIEN',title:'Medien rein. Ohne Umwege.',text:'USB‑Erkennung für Canon, Datei‑ und Speicherkartenimport für DJI sowie direkte Übergabe an Library Pro.',list:['Canon EDSDK‑Sitzung und Modellanzeige','DJI‑Medien aus Geräten und Speicherkarten','Zentrale Übergabe an Library Pro']},create:{eyebrow:'LOOKS · PRESETS · LIGHTROOM',title:'Bearbeiten. Direkt reagieren.',text:'Ein optimierter Echtzeit‑Editor für Looks, Tonwerte, Details, Zuschnitt und den Lightroom‑Workflow.',list:['Smart Enhance und 14 Studio‑Looks','Eigene Presets speichern und wiederverwenden','Volle Auflösung beim Übernehmen']},deliver:{eyebrow:'PLANUNG · PUBLISHING · INSIGHTS',title:'Fertig machen. Sicher ausliefern.',text:'Ein geführter Ablauf führt Inhalte durch Text, Metadaten, Qualitätscheck und Termin bis zum Planer oder Entwurf.',list:['Sechs klar geführte Arbeitsschritte','Planer, Entwürfe und Instagram‑Werkzeuge','Performance und verfügbare Insights']}},en:{capture:{eyebrow:'CANON · DJI · FILES',title:'Bring media in. No detours.',text:'Canon USB detection, DJI file and card import and direct handoff to Library Pro.',list:['Canon EDSDK session and model display','DJI media from devices and memory cards','Central handoff to Library Pro']},create:{eyebrow:'LOOKS · PRESETS · LIGHTROOM',title:'Edit. See every change.',text:'An optimised real-time editor for looks, tones, details, cropping and the Lightroom workflow.',list:['Smart Enhance and 14 studio looks','Save and reuse custom presets','Full resolution when applying edits']},deliver:{eyebrow:'PLANNING · PUBLISHING · INSIGHTS',title:'Finish. Deliver with confidence.',text:'A guided process takes content through copy, metadata, quality checks and scheduling into the planner or drafts.',list:['Six clearly guided steps','Planner, drafts and Instagram tools','Performance and available insights']}}};
+let currentLang=localStorage.getItem('nw-language')==='en'?'en':'de';
+let currentStep='capture';
+function renderStep(){const d=stepData[currentLang][currentStep];document.querySelector('#stepEyebrow').textContent=d.eyebrow;document.querySelector('#stepTitle').textContent=d.title;document.querySelector('#stepText').textContent=d.text;document.querySelector('#stepList').innerHTML=d.list.map(x=>`<li>${x}</li>`).join('');}
+document.querySelectorAll('.tabs button').forEach(button=>button.addEventListener('click',()=>{currentStep=button.dataset.step;document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('active',b===button));renderStep();}));
 
-    if(!document.querySelector('.nw-back-to-company')){
-      const link=document.createElement('a');
-      link.className='nw-back-to-company';
-      link.href='/';
-      link.setAttribute('aria-label','Zurück zur NW Visuals Hauptseite');
-      link.innerHTML='<span aria-hidden="true">⌂</span><b>Home</b>';
-      document.body.appendChild(link);
-    }
-
-    if(!document.getElementById('studio-metal-branding')){
-      const style=document.createElement('style');
-      style.id='studio-metal-branding';
-      style.textContent=`
-        :root{--purple:#d3d8df;--blue:#a9b5c5}
-        body{background:radial-gradient(circle at 72% 12%,rgba(178,188,201,.09),transparent 28%),#05060a}
-        .brand img.visuals-studio-brand{width:188px;height:58px;object-fit:contain;object-position:left center;filter:drop-shadow(0 7px 18px rgba(0,0,0,.4))}
-        .studio-home-link{display:inline-flex!important;align-items:center;gap:6px;color:#f5f5f7!important}.studio-home-link span{font-size:16px;color:#cfd5dd}
-        .studio-hero-logo{display:block;width:min(390px,92%);height:auto;margin:0 0 18px;filter:drop-shadow(0 20px 38px rgba(0,0,0,.48))}
-        h1 span,.section-title h2 span,.camera-copy h2 span{background:linear-gradient(100deg,#fafbfc,#d2d7de 55%,#95a2b2);-webkit-background-clip:text;color:transparent}
-        .nav-cta{border-color:#444c58;background:#d6dce20c;color:#eef1f5!important}
-        .button.primary{background:linear-gradient(110deg,#f7f8fa,#b5beca);color:#07080b}.button.primary:hover{background:linear-gradient(110deg,#fff,#c8d0da)}
-        .release{border-color:#424a56;background:#ffffff04}.release i{background:#8fd8b5;box-shadow:0 0 15px #8fd8b5}
-        .glow{background:radial-gradient(ellipse,rgba(182,190,201,.16),transparent 66%)}
-        .nw-back-to-company{position:fixed;left:18px;bottom:18px;z-index:2500;display:inline-flex;align-items:center;gap:9px;min-height:44px;padding:0 16px;border:1px solid rgba(255,255,255,.17);border-radius:999px;background:rgba(11,13,19,.9);color:#f5f5f7;text-decoration:none;font:700 12px/1 -apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;box-shadow:0 14px 40px rgba(0,0,0,.4);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);transition:.2s}
-        .nw-back-to-company:hover{transform:translateY(-2px);border-color:rgba(210,216,224,.55);background:rgba(25,28,34,.96)}
-        .nw-back-to-company span{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:rgba(214,220,228,.10);color:#eef1f5;font-size:15px}
-        footer img.visuals-studio-brand{width:210px;max-width:100%;height:auto;object-fit:contain;object-position:left center}
-        @media(max-width:720px){.brand img.visuals-studio-brand{width:154px;height:50px}.studio-hero-logo{width:min(320px,92%);margin-bottom:14px}.nw-back-to-company{left:12px;bottom:12px;min-height:42px;padding:0 13px;font-size:11px}.nw-back-to-company span{width:22px;height:22px}.studio-home-link{order:-10}}
-      `;
-      document.head.appendChild(style);
-    }
-  };
-
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',installStudioBranding,{once:true});
-  else installStudioBranding();
-
-  const core=document.createElement('script');
-  core.src='script-core.js?v=210-full';
-  core.defer=true;
-  document.head.appendChild(core);
-})();
+const en={home:'NW Visuals',workflow:'Workflow',features:'Features',integrations:'Integrations',roadmap:'Roadmap',store:'App Store info',badge:'MAC APP · VERSION 21.0',hero_title:'Capture.<br><em>Create. Deliver.</em>',hero_text:'One studio for capture, media, editing, planning and publishing — clearly structured and purpose-built for Mac.',discover:'Discover 21.0',availability:'AVAILABILITY',release:'Planned release · Late autumn 2026',only_store:'Later available exclusively through Apple’s App Stores',wf_title:'Three stages.<br><em>One continuous flow.</em>',wf_intro:'Visuals Studio follows the path of your content: capture, create and deliver with confidence.',f_title:'More control.<br><em>Fewer tool changes.</em>',f_intro:'The essential tools stay close together and follow the real creator workflow.',editor_title:'Your look. Instantly visible.',editor_text:'Smart Enhance, cropping, precise tonal controls, 14 built-in looks and custom presets. Full resolution is calculated when applying changes.',library_title:'Your central media layer.',library_text:'Media library, Instagram posts, Create, Smart Studio and drafts come together in one place.',planned:'Ratings, favourites, albums and filters are planned for the next expansion.',account_title:'Sign in. Choose a plan. Start.',account_text:'Register or sign in, then choose Free or Pro. The Pro trial is prepared; StoreKit billing is not yet live.',deliver_title:'All the way to the finished post.',deliver_text:'Media, editing, copy, metadata, quality checks and scheduling are combined in one guided process.',i_title:'Connected to<br><em>your workflow.</em>',i_intro:'Clearly described — without promising functions that are not finished yet.',canon_text:'USB detection, model display and EDSDK session. Direct image transfer is still being expanded.',dji_text:'Import foundation for mounted devices, action cameras, drones and memory cards.',lr_text:'Open an image in Lightroom or Lightroom Classic and bring the export back into the editor.',ig_text:'Planning, publishing and available insights through the configured Meta connection.',r_title:'Included today.<br><em>Planned next.</em>',current:'In the current build',next:'Still in development',c1:'Navigation built around Capture, Create and Deliver',c2:'Capture home and Library Pro foundation',c3:'Real-time editor and six-step Deliver flow',c4:'Account entry, device overview and support',c5:'Canon, DJI, Lightroom and Instagram foundations',n1:'Library Pro ratings, favourites and albums',n2:'Metadata, collections and fast filters',n3:'Production StoreKit billing',n4:'Complete live sync of all studio content',n5:'Extended camera transfer and DJI integration',av_title:'Planned release: Late autumn 2026.',av_text:'The Mac app is the complete studio. iPhone and iPad are planned as mobile companions. There is no public direct download.',planned_for:'PLANNED FOR',footer:'Capture, Create and Deliver for Mac.'};
+const de={};document.querySelectorAll('[data-t]').forEach(el=>de[el.dataset.t]=el.textContent);document.querySelectorAll('[data-th]').forEach(el=>de[el.dataset.th]=el.innerHTML);
+function setLanguage(lang){currentLang=lang;const dict=lang==='en'?en:de;document.documentElement.lang=lang;document.querySelectorAll('[data-t]').forEach(el=>{if(dict[el.dataset.t])el.textContent=dict[el.dataset.t];});document.querySelectorAll('[data-th]').forEach(el=>{if(dict[el.dataset.th])el.innerHTML=dict[el.dataset.th];});document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));localStorage.setItem('nw-language',lang);renderStep();}
+document.querySelectorAll('.lang button').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.lang)));
+setLanguage(currentLang);
