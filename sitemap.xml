@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.nwvisuals.de/</loc><priority>1.0</priority></url>
-  <url><loc>https://www.nwvisuals.de/projects/visuals-studio/index.html</loc><priority>0.8</priority></url>
-  <url><loc>https://www.nwvisuals.de/imprint.html</loc><priority>0.3</priority></url>
-  <url><loc>https://www.nwvisuals.de/privacy.html</loc><priority>0.3</priority></url>
+<url><loc>https://www.nwvisuals.de/</loc><lastmod>2026-10-25</lastmod></url>
+<url><loc>https://www.nwvisuals.de/imprint.html</loc><lastmod>2026-10-25</lastmod></url>
+<url><loc>https://www.nwvisuals.de/privacy.html</loc><lastmod>2026-10-25</lastmod></url>
+<url><loc>https://www.nwvisuals.de/support.html</loc><lastmod>2026-10-25</lastmod></url>
+<url><loc>https://www.nwvisuals.de/data-deletion.html</loc><lastmod>2026-10-25</lastmod></url>
+<url><loc>https://www.nwvisuals.de/terms.html</loc><lastmod>2026-10-25</lastmod></url>
+<url><loc>https://www.nwvisuals.de/projects/serpentivo/index.html</loc><lastmod>2026-10-25</lastmod></url>
+<url><loc>https://www.nwvisuals.de/projects/serpentivo/privacy.html</loc><lastmod>2026-10-25</lastmod></url>
+<url><loc>https://www.nwvisuals.de/projects/serpentivo/terms.html</loc><lastmod>2026-10-25</lastmod></url>
+<url><loc>https://www.nwvisuals.de/projects/serpentivo/data-deletion.html</loc><lastmod>2026-10-25</lastmod></url>
+<url><loc>https://www.nwvisuals.de/projects/serpentivo/support.html</loc><lastmod>2026-10-25</lastmod></url>
+<url><loc>https://www.nwvisuals.de/projects/visuals-studio/index.html</loc><lastmod>2026-10-25</lastmod></url>
+<url><loc>https://www.nwvisuals.de/projects/visuals-studio/privacy.html</loc><lastmod>2026-10-25</lastmod></url>
+<url><loc>https://www.nwvisuals.de/projects/visuals-studio/terms.html</loc><lastmod>2026-10-25</lastmod></url>
+<url><loc>https://www.nwvisuals.de/projects/visuals-studio/data-deletion.html</loc><lastmod>2026-10-25</lastmod></url>
+<url><loc>https://www.nwvisuals.de/projects/visuals-studio/support.html</loc><lastmod>2026-10-25</lastmod></url>
 </urlset>
