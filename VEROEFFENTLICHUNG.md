@@ -60,3 +60,14 @@ Die Website stellt NW Visuals als Dachmarke dar. Das bestehende Design, die Doma
 ## Website-Prüfung
 
 Alle 20 HTML-Seiten auf lokale Linkziele geprüft: keine fehlenden Ziele. JavaScript-Syntaxprüfungen erfolgreich. Desktop-Vorschau, DE/EN-Umschaltung, App-Navigation und mobiles Menü geprüft. Startseite, Serpentivo-Produktseite und Datenschutzhinweise bei 320/390 px ohne horizontalen Überlauf kontrolliert. Die Ansichten wurden im Browser simuliert, nicht auf einem echten iPhone abgenommen.
+
+## Aktualisierung 28. Oktober 2026
+
+- M Garage als drittes, unabhängiges Entwicklungsprojekt ergänzt: Fahrzeugdaten, manuelle Ausfahrten und Kosten; CarData ausdrücklich als persönlicher Test. Grundlage: M-Garage-iPhone-Build-9-VIN.zip. Keine universelle VIN-Automatik oder kommerzielle BMW-Partnerschaft zugesagt.
+- M Garage erhält eigene Datenschutz-, Support-, Nutzungs- und Löschseiten. Zentrale Verzeichnisse und Anbieterkennzeichnung verweisen auch auf das neue Projekt.
+- Originale M-Garage-App-Aufnahmen vom 27.10.2026, kompakte und breite Darstellung, für die Website komprimiert. Keine privaten Fahrzeugdaten oder VIN enthalten. Die Bilder zeigen einen früheren Teststand als den dokumentierten Quellstand Build 9; die Bildunterschriften geben das Aufnahmedatum an.
+- Serpentivo auf dokumentierten Entwicklungsstand Build 44 aktualisiert; Originalaufnahme der CarPlay-Kartenübersicht vom 27.10.2026 ausschließlich rechteckig auf den App-Bildschirm beschnitten und für das Web komprimiert. Desktop-/Entwickleroberfläche nicht veröffentlicht. Keine UI-Elemente erfunden.
+- Serpentivo-Datenschutz um ausdrücklich ausgelöste Standortmeldungen und deren Datenumfang ergänzt. Keine neue Prüfung oder Änderung am produktiven Backend vorgenommen.
+- Für Visuals Studio wurde keine aktuelle Originalaufnahme gefunden. Die bestehende Oberfläche ist ausdrücklich als illustrative Workflow-Vorschau gekennzeichnet. Der dokumentierte Mac-Stand bleibt 22.6.0.
+- JavaScript-Syntax und interne Verlinkung geprüft. Desktopansicht, DE/EN, Screenshot-Vergrößerung/Schließen und 320/390-px-Ansichten im Browser geprüft; kein seitlicher Überlauf. Keine native App-/Geräteabnahme durch die Website-Prüfung.
+- Frühere offene Punkte zu Anbieterkennzeichnung, Verträgen und Store-Freigabe bleiben bestehen. Diese Website-Aktualisierung bestätigt keine Gewerbeanmeldung und keine App-Veröffentlichung.
