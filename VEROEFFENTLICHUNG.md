@@ -1,4 +1,4 @@
-# NW Visuals: Website-Stand 25. Oktober 2026
+# NW Visuals: Website-Stand 30. Oktober 2026
 
 Die Website stellt NW Visuals als Dachmarke dar. Das bestehende Design, die Domain und das Hosting bleiben erhalten. App-Seiten und rechtliche URLs bleiben getrennt. Dieser Stand ist keine abschließende Rechtsberatung oder App-Store-Freigabe.
 
@@ -6,7 +6,7 @@ Die Website stellt NW Visuals als Dachmarke dar. Das bestehende Design, die Doma
 
 - Website-Repository, Ausgangscommit: 0826d31e8c467d2b9b56bd34b29d7b289a134f29.
 - Serpentivo 0.11.0 / Build 25, Bibliotheksdatei Serpentivo_Build25_Repariert.zip, Version 12: Konto, persönlicher Cloud-Abgleich, Heimziel, GPX, Apple Karten, Standort im Hintergrund bei aktiver Ausfahrt, Push-Registrierungen, Live-Anzeige, Community, Kontolöschfunktion und Apple-Kaufzuordnung.
-- Visuals Studio 22.6.0 / Build 2260: lokale Mac-Projekte, optionale Konto-/Gerätefunktionen, Instagram, Cloudinary und Löschaufruf. Ein neuerer mobiler Quellstand war in der gezielten Dateisuche nicht auffindbar. Mobile Veröffentlichungen sind deshalb nicht durch die Mac-Datenschutzerklärung abschließend abgedeckt.
+- Visuals Studio 22.6.1 / Mac Build 2261: lokale Mac-Projekte, optionale Konto-/Gerätefunktionen, Instagram, Cloudinary und Löschaufruf. Im kombinierten Xcode-Projekt ist der originale iPhone-/iPad-Begleiter als Mobile Build 2265 wiederhergestellt. Der mobile Stand befindet sich im internen Test und ist nicht öffentlich veröffentlicht.
 - Die Datenbankprojekte beider Produkte sind Frankfurt zugeordnet. Der Kontodienst NW Visuals wurde bei der Bestandsprüfung als INACTIVE gemeldet. Keine Änderung an Cloud-Projekten durchgeführt.
 - Systematik und Pflichtangaben anhand DDG § 5, DSGVO und aktueller Anbieterinformationen geprüft. Die Website macht keine Aussage „rechtssicher“ oder „DSGVO-zertifiziert“.
 
@@ -25,7 +25,7 @@ Die Website stellt NW Visuals als Dachmarke dar. Das bestehende Design, die Doma
 - Serpentivo: Standortumfang, GPS-Hintergrundbetrieb, Live-Anzeige, mitgespeichertes Heimziel und importierte Tracks mit Store-Datenschutzangaben abgleichen. Eine Standort-Systemfreigabe ersetzt keine vollständige Information.
 - Serpentivo: keine öffentlich freigegebene CarPlay- oder länderweite Offline-Navigation bewerben, bis diese tatsächlich abgenommen ist. StoreKit-Produkte und Abobedingungen erst nach Prüfung veröffentlichen.
 - Visuals Studio: Kontodienst wiederherstellen beziehungsweise eine gewollte Produktentscheidung treffen; anschließend Konto-/Gerätefunktion und Löschung testen. Nicht als fertigen Live-Sync sämtlicher Medien bewerben.
-- Visuals Studio: aktuellen Mac-/iPhone-/iPad-Quellstand zusammenführen und die Datenschutzbeschreibung auf tatsächlich verwendete APIs/Dienste aktualisieren. Der öffentlich dokumentierte Mac-Stand bleibt explizit 22.6.0.
+- Visuals Studio: Mac- und iPhone-/iPad-Quellstand sind im geprüften Projekt zusammengeführt. Vor Veröffentlichung des Mobile Builds 2265 Datenwege, Photo-Library-Berechtigungen, App Group/iCloud-Entitlements, Account-Flows und Kontolöschung auf echten Geräten vollständig testen. Der öffentlich dokumentierte Mac-Stand ist 22.6.1 / Build 2261; die Mac-App bleibt die Hauptapp.
 - Visuals Studio: öffentliche Cloudinary-Uploads, enthaltene EXIF-Metadaten und das tatsächliche Entfernen gespeicherter Medien/Token prüfen.
 - Daten-/Bildlizenzen einzeln dokumentieren. Kein Import fremder GPX-, Pass- oder Bildbestände allein aufgrund öffentlicher Abrufbarkeit. Quellen-/ODbL-/Bildnachweise direkt in den Produkten prüfen.
 
@@ -68,6 +68,14 @@ Alle 20 HTML-Seiten auf lokale Linkziele geprüft: keine fehlenden Ziele. JavaSc
 - Originale M-Garage-App-Aufnahmen vom 27.10.2026, kompakte und breite Darstellung, für die Website komprimiert. Keine privaten Fahrzeugdaten oder VIN enthalten. Die Bilder zeigen einen früheren Teststand als den dokumentierten Quellstand Build 9; die Bildunterschriften geben das Aufnahmedatum an.
 - Serpentivo auf dokumentierten Entwicklungsstand Build 44 aktualisiert; Originalaufnahme der CarPlay-Kartenübersicht vom 27.10.2026 ausschließlich rechteckig auf den App-Bildschirm beschnitten und für das Web komprimiert. Desktop-/Entwickleroberfläche nicht veröffentlicht. Keine UI-Elemente erfunden.
 - Serpentivo-Datenschutz um ausdrücklich ausgelöste Standortmeldungen und deren Datenumfang ergänzt. Keine neue Prüfung oder Änderung am produktiven Backend vorgenommen.
-- Für Visuals Studio wurde keine aktuelle Originalaufnahme gefunden. Die bestehende Oberfläche ist ausdrücklich als illustrative Workflow-Vorschau gekennzeichnet. Der dokumentierte Mac-Stand bleibt 22.6.0.
+- Für Visuals Studio wurde keine aktuelle Originalaufnahme gefunden. Die bestehende Oberfläche ist ausdrücklich als illustrative Workflow-Vorschau gekennzeichnet. Der dokumentierte Mac-Stand ist 22.6.1 / Build 2261; Mobile Build 2265 wird separat als interner Teststand ausgewiesen.
 - JavaScript-Syntax und interne Verlinkung geprüft. Desktopansicht, DE/EN, Screenshot-Vergrößerung/Schließen und 320/390-px-Ansichten im Browser geprüft; kein seitlicher Überlauf. Keine native App-/Geräteabnahme durch die Website-Prüfung.
 - Frühere offene Punkte zu Anbieterkennzeichnung, Verträgen und Store-Freigabe bleiben bestehen. Diese Website-Aktualisierung bestätigt keine Gewerbeanmeldung und keine App-Veröffentlichung.
+
+## Aktualisierung 30. Oktober 2026
+
+- Projektarchiv `Visuals_Studio_V22.6.1_Build_2265_ORIGINAL_MOBILE_RESTORED_COMBINED.zip` geprüft. Die Xcode-Konfiguration bestätigt Visuals Studio 22.6.1, Mac Build 2261 und Mobile Build 2265.
+- Der originale SwiftUI-Stand für iPhone und iPad ist im kombinierten Projekt wiederhergestellt. Studio, Library, Studio Editor, Capture Hub, Creator Workflow, Planer, Performance, Account/Cloud, Support und Mehr stammen aus dem historischen Mobile-Projekt; eine neue Duo-Sonderoberfläche wird nicht behauptet.
+- Website und englische Übersetzungen unterscheiden Mac-Hauptapp und mobilen Teststand. Produktive StoreKit-Abrechnung, vollständiger Live-Sync und erweiterter direkter Kamera-Bildtransfer bleiben ausdrücklich in Entwicklung.
+- Kein öffentlicher Direktdownload. Geplanter Release Spätherbst 2026, später ausschließlich über Apples App Stores. Bestehende Anbieter- und Kontaktdaten unverändert gelassen.
+
