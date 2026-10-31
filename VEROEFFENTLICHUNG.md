@@ -79,3 +79,31 @@ Alle 20 HTML-Seiten auf lokale Linkziele geprüft: keine fehlenden Ziele. JavaSc
 - Website und englische Übersetzungen unterscheiden Mac-Hauptapp und mobilen Teststand. Produktive StoreKit-Abrechnung, vollständiger Live-Sync und erweiterter direkter Kamera-Bildtransfer bleiben ausdrücklich in Entwicklung.
 - Kein öffentlicher Direktdownload. Geplanter Release Spätherbst 2026, später ausschließlich über Apples App Stores. Bestehende Anbieter- und Kontaktdaten unverändert gelassen.
 
+
+## Aktualisierung 31. Oktober 2026
+
+- Serpentivo 0.12.32 / Build 66 anhand des vollständigen Archivs geprüft: Tanken & Laden über Apple-Kartensuche auf iPhone und CarPlay, gespeicherte Adressen/Verlauf, Konto & Sync sowie Abmeldung. Keine Live-Spritpreise, Ladebelegung oder vollständige Offline-Navigation zugesagt. Original-Kontoaufnahme IMG_0175.PNG vom 31.10. ohne eingegebene Kontodaten ergänzt; CarPlay-Aufnahme vom 27.10. bleibt mit Datum gekennzeichnet.
+- M Garage Build 11: integriertes Safari-Vollbild für BMW-Einrichtung beschrieben; persönlicher Client/API-Zugang weiterhin nötig, kein universeller VIN-Import. Originalaufnahmen vom 27.10. unverändert als früherer Teststand gekennzeichnet.
+- Visuals Studio 22.6.1 / Mac 2261 und Mobile 2265 getrennt gehalten. Mobile Quellprüfung zeigt automatische private CloudKit-Sicherung/Abgleich für Planer, Entwürfe, Personenlisten, eigene Presets und verknüpfte Medien, standardmäßig eingeschaltet. Datenschutz und Löschinformationen entsprechend ergänzt. Die gefundenen aktuellen Bilddateien zeigen nur Xcode-Fehler/Signing und wurden nicht als Produktaufnahmen verwendet; Workflow-Illustration bleibt gekennzeichnet.
+- MCA (Minga Car Addicts) 0.6.4 als Projekt für eine einzige private, markenoffene Crew ergänzt. Profil, Fahrzeuge und Treffen lokal; Chat nur Arbeitsspeicher, Mitgliederliste mit Beispielen, gemeinsame Alben und Serverzugang noch nicht verbunden. Keine öffentliche Gruppenregistrierung. Zwei originale leere Testansichten vom 31.10. ohne private Mitglieder/Fahrzeuge/Treffpunkte veröffentlicht. Eigene Datenschutz-, Support-, Nutzungs- und Löschseiten erstellt.
+- Impressum auf die vorliegende Anbieteridentität begrenzt; keine erfolgte Gewerbeanmeldung behauptet. Design beibehalten, zentrale Originalaufnahmen-Galerie und Screenshot-Dialog ergänzt.
+
+### Website-Prüfung
+32 HTML-Seiten: lokale Ziele und Anker vollständig. JavaScript-Syntax, diff check, Desktop, DE/EN, mobiles Menü sowie Screenshot-Dialog mit Escape geprüft. Startseite 320 px, MCA 390 px und Visuals-Studio-Datenschutz 390 px ohne horizontalen Überlauf im Browser. Keine native Geräteabnahme.
+
+### Vor Apple-Einreichung weiterhin offen
+- Website-Änderungen ersetzen keine App-Abnahme oder juristische Freigabe. Gewerbeanmeldung und verbindliche Anbieter-/Vertragsangaben vor kommerziellem Start bestätigen. Kein Store-Release durch diese Änderung.
+- Visuals Studio Mobile 2265: PrivacyInfo-iOS.xcprivacy deklariert noch eine leere Liste erhobener Daten trotz Konto-/Geräteübermittlung; vor Einreichung mit dem tatsächlichen Datenumfang abgleichen. Registrierung/Anmeldung in MobileCloudAccount gefunden, aber keine vollständige In-App-Kontolöschung. Löschweg für Konto und zugehörige Inhalte sowie private CloudKit-Daten ergänzen und tatsächlich testen. Mac-Löschung darf nicht als mobiler Nachweis gelten.
+- Serpentivo: vorhandenen delete-account-Endpunkt und vollständige Bereinigung mit eigenem Testkonto prüfen; Website allein bestätigt keinen produktiven End-to-End-Test. Sandbox-Kaufdialog zeigte in einer Aufnahme abweichende Monatslaufzeit: StoreKit-Testkonfiguration und späteres Sechsmonatsprodukt mit tatsächlichem Store-Angebot abgleichen. Keine Preis-Testaufnahme als Werbung verwendet.
+- App Store Connect: aktuelle Datenschutz-URL und Support-URL pro App hinterlegen; Datenschutzantworten einschließlich Drittanbieter, Kontozuordnung, präziser Standort-/Adressdaten, Nutzerinhalte, Kaufdaten und Push-Installationen gegen endgültiges Verhalten abgleichen. Privacy-Manifeste und Zwecktexte separat kontrollieren. Angaben nur lokal verarbeiteter Daten entsprechend Apples Definition bewerten.
+- MCA: serverseitige Mitglieds-/Rollenprüfung, Inhalte melden/blockieren/Moderation und Kontolöschung vor einem gemeinsamen Onlinebetrieb implementieren; lokale Admin-Testansicht nicht als Zugriffsschutz verwenden.
+- M Garage: BMW-/VIN-Datenzugang und Marken-/Gestaltungsrechte vor öffentlichem Angebot klären.
+- CarPlay-Entitlement, funktionierender Review-Zugang, reale Geräte-/Kauf-/Offline-Prüfungen und Erreichbarkeit aller Dienste für die finale Einreichung bestätigen.
+
+### Aktuelle Referenzen
+- https://developer.apple.com/app-store/review/guidelines/
+- https://developer.apple.com/help/app-review/guideline-reference/5-1-1-account-deletion/
+- https://developer.apple.com/app-store/app-privacy-details/
+- https://www.gesetze-im-internet.de/ddg/__5.html
+- https://www.gesetze-im-internet.de/ttdsg/__25.html
+- https://supabase.com/legal/privacy-resources/data-residency-and-transfers-faq
