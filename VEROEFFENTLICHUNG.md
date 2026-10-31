@@ -107,3 +107,12 @@ Alle 20 HTML-Seiten auf lokale Linkziele geprüft: keine fehlenden Ziele. JavaSc
 - https://www.gesetze-im-internet.de/ddg/__5.html
 - https://www.gesetze-im-internet.de/ttdsg/__25.html
 - https://supabase.com/legal/privacy-resources/data-residency-and-transfers-faq
+
+## Originalaufnahmen und ATS-Portfolio · 1. November 2026
+- Auf ausdrücklichen Nutzerwunsch ATS Bau und ATS Team als für ATS entwickelte Fachanwendungen in eigenem Bereich ergänzt. Die vier eigenen NW-Projekte bleiben als solche erkennbar.
+- Drei zusätzliche Originalaufnahmen: Serpentivo IMG_0124.PNG (Cloud/Backup, 30.10.), ATS Bau Mac-Bildschirm vom 11.10. (Ausschnitt ohne Baustellenliste/Projektnamen/Desktop), ATS Team IMG_0011.jpeg (Oktober, Ausschnitt der Navigation ohne die gequetschten Inhaltsbereiche). Nur rechteckig beschnitten und fürs Web komprimiert; keine UI oder Inhalte erfunden. Frühere Teststände ausdrücklich beschriftet.
+- ATS Bau-Stand anhand ATS_Bau_Stand_2026-10-25.txt und Quellarchiv 0.11.5 / Build49 belegt; ATS Team anhand README Build42 RC3. Keine aktuelle Store-Freigabe oder neue native Prüfung behauptet. Die unbekannten hellen Bautagebuch-Bilder und generierten Konzeptbilder nicht als Originale verwendet.
+- Andere geprüfte Serpentivo-Fahrbilder zeigten private Zuhause-/Arbeitsziele oder genaue GPS-Positionen; sie werden nicht veröffentlicht. Apple- und Supabase-Mails sowie Xcode-Fehleransichten nicht als Produktbilder verwendet.
+- Portfolio lädt nur lokale Bilder; keine neue Authentifizierung, kein Backend und keine Verbindung interner ATS-Daten. Website-Datenschutz entsprechend ergänzt.
+
+Prüfung dieser Ergänzung: interne Ziele/Anker und JavaScript-Syntax fehlerfrei; ATS-Abschnitt Desktop, Screenshot-Dialog/Escape und 320-/390-px-Ansichten ohne horizontalen Überlauf geprüft. Bildabmessungen hinterlegt, damit die Galerie beim Laden nicht springt.
