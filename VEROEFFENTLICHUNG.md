@@ -116,3 +116,14 @@ Alle 20 HTML-Seiten auf lokale Linkziele geprüft: keine fehlenden Ziele. JavaSc
 - Portfolio lädt nur lokale Bilder; keine neue Authentifizierung, kein Backend und keine Verbindung interner ATS-Daten. Website-Datenschutz entsprechend ergänzt.
 
 Prüfung dieser Ergänzung: interne Ziele/Anker und JavaScript-Syntax fehlerfrei; ATS-Abschnitt Desktop, Screenshot-Dialog/Escape und 320-/390-px-Ansichten ohne horizontalen Überlauf geprüft. Bildabmessungen hinterlegt, damit die Galerie beim Laden nicht springt.
+
+
+## Portfolio-Überarbeitung – 1. November 2026
+
+Startseite mit persönlichem Einstieg, einheitlichen Projektkarten, ausgewählten Originalaufnahmen und kompakten Verweisen auf die vollständigen Galerien. Aufnahmezeit und frühere Teststände bleiben kenntlich; Visuals Studio zeigt weiterhin eine ausdrücklich beschriftete Illustration. Bilddateien und App-Oberflächen wurden nicht erfunden oder verändert.
+
+Quellstände: Serpentivo 0.12.35 Build 69; M Garage Build 11; Visuals Studio Mac 2261 / Mobile 2265; MCA 0.8.0 Build 15; ATS Bau 0.11.5 Build 49; ATS Team 1.1.0 Build 42 RC3. MCA-Alben, Adressvorschläge und Kalenderübergabe sowie Serpentivo-Stationssuche sind entsprechend beschrieben. Kein Store-Release oder neuer Gerätetest behauptet.
+
+Neue zentrale Datenschutzübersicht und getrennte ATS-Bau-/ATS-Team-Hinweise auf nwvisuals.de, mit ATS als Verantwortlichem für die betriebliche Nutzung. Die WordPress-Verbindung zu ats-senden.de/neue-seite lieferte HTML statt API-Daten; dort wurden keine Seiten geändert. Native Themen wie mobile Kontolöschung, Manifestangaben und die Übereinstimmung mit App Store Connect bleiben eigenständige offene Prüfungen. Keine rechtliche oder Apple-Freigabe zugesichert.
+
+Validierung: lokale HTML-Ziele und Anker, JavaScript-Syntax, git diff --check; Browseransicht Desktop und mobile Breiten 320/390 ohne horizontalen Überlauf. Screenshot-Vergrößerung und Live-Deployment werden bei Veröffentlichung geprüft.
