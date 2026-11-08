@@ -127,3 +127,19 @@ Quellstände: Serpentivo 0.12.35 Build 69; M Garage Build 11; Visuals Studio Mac
 Neue zentrale Datenschutzübersicht und getrennte ATS-Bau-/ATS-Team-Hinweise auf nwvisuals.de, mit ATS als Verantwortlichem für die betriebliche Nutzung. Die WordPress-Verbindung zu ats-senden.de/neue-seite lieferte HTML statt API-Daten; dort wurden keine Seiten geändert. Native Themen wie mobile Kontolöschung, Manifestangaben und die Übereinstimmung mit App Store Connect bleiben eigenständige offene Prüfungen. Keine rechtliche oder Apple-Freigabe zugesichert.
 
 Validierung: lokale HTML-Ziele und Anker, JavaScript-Syntax, git diff --check; Browseransicht Desktop und mobile Breiten 320/390 ohne horizontalen Überlauf. Screenshot-Vergrößerung und Live-Deployment werden bei Veröffentlichung geprüft.
+
+## Aktualisierung 8. November 2026 · Serpentivo Build 104
+
+Geprüft wurde der Produktionskandidat 0.12.73 (104). Der Kandidat ist auf den NW-Kontodienst konfiguriert. Die Freigabe des Piloten, der finale Cloud-Export nach Schreibstopp und der Restore auf NW stehen laut Paketdokumentation aus. Die öffentlichen Datenschutzhinweise decken daher Altversionen mit Supabase Cloud und den NW-Kandidaten ab. Der Build enthält Weblinks zu Datenschutz und Impressum; die bestehenden öffentlichen URLs bleiben gültig.
+
+| Laufzeit | Preis im lokalen Xcode-Testkatalog | Probezeit für Berechtigte im Testkatalog |
+| --- | ---: | ---: |
+| 1 Woche | 9,99 € | 3 Tage |
+| 1 Monat | 14,99 € | 7 Tage |
+| 3 Monate | 29,99 € | 7 Tage |
+| 6 Monate | 44,99 € | 7 Tage |
+| 1 Jahr | 89,99 € | 7 Tage |
+
+Der lokale Katalog dokumentiert Testwerte. TestFlight und der öffentliche Store beziehen die Angebote aus App Store Connect. Vor der Veröffentlichung die fünf Produkte, Einführungsangebote und Kaufwiederherstellung mit einem normalen Konto prüfen. Der bisherige Preis aus den Notizen für Build 70 ist historisch.
+
+Für den Produktionsbetrieb stehen Login und Sync mit bestehendem Konto, Bestätigungs- und Recovery-E-Mail, Push, Serverjobs und Kontolöschung auf dem NW-Server zur Abnahme an. Zu bestätigen sind außerdem die tatsächlich eingesetzten Anbieter für Transaktionsmails und Infrastruktur, Aufbewahrung und Löschung bei Logs, Backups und dem Cloud-Rückweg sowie die Übermittlungsgarantien der konkret eingesetzten Anbieter. App Privacy in App Store Connect mit dem produktiven Datenfluss und den Privacy-Manifests abgleichen. Für das Impressum fehlen weiterhin bestätigte Angaben zu einem zusätzlichen unmittelbaren Kontaktweg und gegebenenfalls zu vorhandenen veröffentlichungspflichtigen Identifikationsnummern.
