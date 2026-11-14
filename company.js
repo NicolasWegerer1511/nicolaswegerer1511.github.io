@@ -14,9 +14,10 @@ Object.assign(en, {
   "motivo_nav": "Photo spots and photo trips",
   "motivo_status": "In development",
   "motivo_title": "Photo spots for your next trip.",
-  "motivo_text": "Explore photo spots in Germany, Austria and Switzerland. The prototype offers a map, search and favourites. Verified shooting locations, travel information and photography tips are planned in German and English.",
-  "motivo_map": "Map and search",
-  "motivo_favourites": "Favourites"
+  "motivo_text": "Motivo is being developed for Germany, Austria and Switzerland. Plans include a photo spot map, tips on lighting and access, and favourites for your next trip.",
+  "motivo_map": "Photo spot map",
+  "motivo_favourites": "Light and access",
+  "motivo_unlock": "One-time purchase planned"
 });
 const de={};
 document.querySelectorAll('[data-i18n]').forEach(el=>de[el.dataset.i18n]=el.textContent);
