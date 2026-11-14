@@ -14,7 +14,7 @@ Object.assign(en, {
   "motivo_nav": "Photo spots and photo trips",
   "motivo_status": "In development",
   "motivo_title": "Photo spots for your next trip.",
-  "motivo_text": "Find places you would like to photograph. The prototype lets you search photo spots on the map, filter by country and save favourites.",
+  "motivo_text": "Explore photo spots in Germany, Austria and Switzerland. The prototype offers a map, search and favourites. Verified shooting locations, travel information and photography tips are planned in German and English.",
   "motivo_map": "Map and search",
   "motivo_favourites": "Favourites"
 });
