@@ -9,3 +9,24 @@ html{scroll-padding-top:105px}.hero{padding-top:145px;padding-bottom:85px;gap:58
 @media(max-width:1000px){.hero{grid-template-columns:minmax(0,1fr);padding-top:120px}.hero-originals{height:470px;max-width:670px;width:100%;margin:15px auto 0}.hero-wide{width:82%;top:80px}.hero-phone{width:27%;top:42px}.portfolio-card{grid-template-columns:repeat(2,minmax(0,1fr))}.portfolio-card h2{font-size:33px!important}.ats-showcase{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){html{scroll-padding-top:85px}.hero{padding-top:115px;padding-bottom:35px;gap:10px}.hero h1{font-size:clamp(43px,12vw,64px);line-height:1.04}.hero .lead{font-size:16px;line-height:1.8}.hero-originals{height:335px;margin-top:30px}.preview-heading{font-size:8px;letter-spacing:.06em}.preview-heading b{padding:5px 8px;font-size:9px}.hero-wide{top:75px;width:86%;border-radius:14px!important}.hero-phone{width:28%;top:45px;border-radius:13px!important}.hero-originals>a>span{padding:9px 11px;font-size:11px}.hero-originals small{font-size:9px}.hero-phone>span{font-size:9px!important;padding:7px!important}.hero-phone small{display:none}.hero-label{font-size:10px;bottom:10px}.hero-signature{margin-top:27px}.principles{grid-template-columns:minmax(0,1fr);gap:20px;padding:24px 0}.principles>div{display:grid;grid-template-columns:27px 1fr;column-gap:12px}.principles h3{font-size:18px;margin:0 0 6px}.principles p{grid-column:2;max-width:none;font-size:12px}.principles b{padding-top:3px}#services{padding-top:0;padding-bottom:40px}.portfolio-heading h2{font-size:34px}.portfolio-heading>p:last-child{font-size:14px}.project-index{gap:7px;padding-bottom:22px}.project-index a{font-size:10px;padding:9px 11px}.portfolio-card{grid-template-columns:minmax(0,1fr);padding:24px!important;gap:28px}.portfolio-card h2{font-size:33px!important}.portfolio-card .product-copy>p:not(.project-note){font-size:14px;line-height:1.85}.portfolio-meta{margin-bottom:20px;font-size:9px;gap:9px}.portfolio-card .app-brand strong{font-size:19px}.portfolio-stage{padding:19px 13px;min-height:0;border-radius:20px}.portfolio-stage .phone{max-width:245px}.portfolio-stage .phone img{max-height:370px}.screen-frame{border-radius:14px}.screen-frame figcaption{padding:12px 28px 12px 13px}.screen-frame figcaption strong{font-size:11px}.screen-frame figcaption span{font-size:9px}.screen-gallery{grid-template-columns:minmax(0,1fr);gap:25px}.screen-gallery-serp>.screen-frame:first-child{grid-column:auto}.screen-gallery .phone{max-width:280px}.screen-frame.phone img{max-height:460px}.gallery-link-head{display:block}.gallery-link-head>p{font-size:13px}.project-galleries{gap:10px}.project-galleries>a{padding:17px 13px}.project-galleries strong{font-size:13px;line-height:1.4}.project-galleries small{font-size:9px}.project-galleries b{right:12px;top:14px}.ats-showcase{grid-template-columns:minmax(0,1fr);gap:22px}.ats-showcase>article{padding:22px}.ats-showcase .screen-frame>a{height:280px}.ats-showcase .screen-frame img{max-height:280px}.ats-showcase .phone img{height:280px}.privacy-index{grid-template-columns:minmax(0,1fr)}.policy-toc nav{grid-template-columns:minmax(0,1fr)}.privacy-index>a{padding:22px}.gallery-section{padding-bottom:55px}.portfolio-stage .studio-illustration{min-height:240px}}
 @media(prefers-reduced-motion:reduce){.hero-originals>a{transform:none}.project-galleries>a{transition:none}}
+
+.motivo-card {
+  background: radial-gradient(ellipse at 85% 25%, #15392d 0%, transparent 62%), #101720;
+}
+.motivo-logo {
+  display: block;
+  width: min(100%, 480px);
+  height: auto;
+  margin-inline: auto;
+  border: 1px solid #4c695a;
+  border-radius: 24px;
+}
+.motivo-card .motivo-logo { width: min(100%, 360px); }
+.motivo-hero { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); }
+.motivo-hero h1 { font-size: clamp(42px, 5.1vw, 70px); }
+.motivo-hero + .section .principles > div { display: block; }
+.motivo-hero + .section .principles h3 { margin-top: 0; }
+@media (max-width: 860px) {
+  .motivo-hero { grid-template-columns: minmax(0, 1fr); }
+  .motivo-hero .motivo-logo { margin-top: 24px; }
+}
