@@ -2,10 +2,6 @@ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const reveals=document.querySelectorAll('.reveal');
 if(reduced){reveals.forEach(el=>el.classList.add('visible'));}else{const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.12,rootMargin:'0px 0px -30px'});reveals.forEach(el=>observer.observe(el));}
 
-const menu=document.querySelector('.menu'),links=document.querySelector('.links');
-menu?.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));document.body.style.overflow=open?'hidden':'';});
-document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu?.setAttribute('aria-expanded','false');document.body.style.overflow='';}));
-
 const stepData={
   de:{
     project:{eyebrow:'PROJEKTE · DIREKTER WORKFLOW',title:'Projekt anlegen. Direkt loslegen.',text:'Ein neues oder vorhandenes Projekt öffnet die zentrale Mediathek und legt Originale, Bearbeitungen und Exporte klar getrennt ab.',list:['Projektordner frei wählen oder öffnen','Relative Projektdatei für Backups','Aktives Projekt jederzeit sichtbar']},
@@ -48,4 +44,5 @@ const de={};document.querySelectorAll('[data-t]').forEach(el=>de[el.dataset.t]=e
 function setLanguage(lang){currentLang=lang;const dict=lang==='en'?en:de;document.documentElement.lang=lang;document.querySelectorAll('[data-t]').forEach(el=>{if(dict[el.dataset.t])el.textContent=dict[el.dataset.t];});document.querySelectorAll('[data-th]').forEach(el=>{if(dict[el.dataset.th])el.innerHTML=dict[el.dataset.th];});document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));renderStep();}
 document.querySelectorAll('.lang button').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.lang)));
 setLanguage(currentLang);
+
 
