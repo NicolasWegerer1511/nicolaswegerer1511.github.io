@@ -14,7 +14,7 @@ Object.assign(en, {
   "motivo_nav": "Photo spots and photo trips",
   "motivo_status": "In development",
   "motivo_title": "Photo spots for your next trip.",
-  "motivo_text": "Motivo is being developed for Germany, Austria and Switzerland. Plans include a photo spot map, tips on lighting and access, and favourites for your next trip.",
+  "motivo_text": "Find photo spots, save favourites and put together your own photo trip. Motivo is planned initially for Germany, Austria and Switzerland, with verified information on lighting and access.",
   "motivo_map": "Photo spot map",
   "motivo_favourites": "Light and access",
   "motivo_unlock": "One-time purchase planned"
