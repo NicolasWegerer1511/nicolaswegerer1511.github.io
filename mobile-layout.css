@@ -1,19 +1,69 @@
-/* Leave Safari in control of screen edges on both iPhone Duo displays. */
+/* Shared layout for narrow windows, tablets and folding displays. */
+:root {
+  --nav-height: 72px;
+  --page-gutter: clamp(16px, 3vw, 30px);
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--nav-height) + 16px);
+}
+.shell {
+  width: min(calc(100% - 2 * var(--page-gutter)), var(--shell, 1180px));
+}
 .header .nav {
   position: relative;
 }
-
-@media (max-width: 760px), (max-width: 1000px) and (max-height: 480px) {
-  html {
-    scroll-padding-top: 78px;
-  }
-  .header .nav {
-    height: 64px;
-  }
+main, .hero > *, .product-card > *, .section-head > *,
+.gallery-link-head > *, .about > *, footer > *, .legal-header > * {
+  min-width: 0;
+}
+img {
+  max-width: 100%;
+}
+p, li, figcaption, .badge {
+  overflow-wrap: break-word;
+}
+a, button, input {
+  -webkit-tap-highlight-color: #a9cce133;
+}
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #9fd6ff;
+  outline-offset: 4px;
+}
+.project-index a, .product-links a, .legal-header nav a,
+.legal-footer nav a, footer nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.legal-header nav, .legal-footer nav {
+  align-items: flex-start;
+}
+.legal-main table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.viewer button {
+  min-height: 44px;
+}
+.viewer {
+  max-height: 94vh;
+  max-height: 94dvh;
+}
+.viewer img {
+  min-height: 0;
+  flex: 1 1 auto;
+}
+@media (max-width: 1024px) {
+  :root { --nav-height: 64px; }
+  .header .nav { height: var(--nav-height); }
   .header .menu {
     display: grid;
     width: 48px;
     height: 48px;
+    flex-shrink: 0;
     place-content: center;
     gap: 6px;
     border: 1px solid var(--line);
@@ -31,8 +81,8 @@
     display: none;
     position: absolute;
     inset: 100% 0 auto;
-    max-height: calc(100vh - 76px);
-    max-height: calc(100dvh - 76px);
+    max-height: calc(100vh - var(--nav-height) - 12px);
+    max-height: calc(100dvh - var(--nav-height) - 12px);
     overflow-y: auto;
     overscroll-behavior: contain;
     flex-direction: column;
@@ -44,18 +94,16 @@
     background: #090b10;
     box-shadow: 0 18px 30px #0008;
   }
-  .header .links.open {
-    display: flex;
-  }
-  .header .links > * {
-    flex-shrink: 0;
-  }
-  .header .links > a,
-  .header .navgroup > button {
+  .header .links.open { display: flex; }
+  .header .links > * { flex-shrink: 0; }
+  .header .links > a, .header .navgroup > button {
     display: flex;
     align-items: center;
+    width: 100%;
     min-height: 48px;
     padding: 10px 12px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
     text-align: left;
   }
   .header .navgroup .drop {
@@ -67,31 +115,105 @@
     visibility: visible;
     transform: none;
   }
-  .header .navgroup.open .drop {
-    display: grid;
-  }
-  .header .lang {
-    width: max-content;
-  }
-  .header .lang button {
-    min-height: 44px;
-    min-width: 44px;
-  }
-}
-@media (max-width: 1000px) and (max-height: 480px) {
-  .hero.shell {
-    padding-top: 45px;
-  }
-}
+  .header .navgroup.open .drop { display: grid; }
+  .header .drop a { min-height: 48px; }
+  .header .lang { width: max-content; }
+  .header .lang button { min-height: 44px; min-width: 44px; }
 
-/* Progressive enhancement for Safari with viewport segments enabled. */
-@media (horizontal-viewport-segments: 2) {
-  .hero.shell,
+  .hero.shell {
+    min-height: 0;
+    padding-top: 64px;
+    padding-bottom: 40px;
+  }
   .portfolio-card {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: max(38px, calc(env(viewport-segment-left 1 0, 0px) - env(viewport-segment-right 0 0, 0px) + 30px));
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
   }
-  .hero h1 {
-    font-size: clamp(34px, 5vw, 55px);
+  .portfolio-card .product-copy > p:not(.project-note) { max-width: 65ch; }
+  .portfolio-stage { min-height: 0; }
+  .hero-originals {
+    height: auto;
+    aspect-ratio: 1.4;
+    max-width: 620px;
   }
+  .hero-wide { top: 17%; }
+  .hero-phone { top: 10%; }
+  .legal-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+@media (max-width: 760px) {
+  .hero h1, .hero .hero-copy h1 {
+    font-size: clamp(36px, 10.5vw, 60px);
+    line-height: 1.08;
+  }
+  .hero .lead { font-size: 16px; line-height: 1.7; }
+  .hero-signature { margin-top: 22px; }
+  .hero-originals { margin-top: 28px; }
+  .hero-originals > a { border-radius: 14px; }
+  .hero-wide { width: 86%; }
+  .hero-phone { width: 28%; }
+  .preview-heading { top: 0; }
+  .portfolio-heading h2, .section-head h2, .about h2, .title h2 {
+    font-size: clamp(30px, 8vw, 44px);
+    line-height: 1.15;
+  }
+  .portfolio-card { padding: 24px !important; }
+  .portfolio-card .actions { justify-content: flex-start; }
+  .portfolio-card .product-links { gap: 5px 16px; }
+  .portfolio-card .pills { flex-wrap: wrap; }
+  .portfolio-card .studio-illustration { overflow: hidden; }
+  .section, .gallery-section { padding-top: 44px; padding-bottom: 44px; }
+  .legal-main article { padding: 22px 18px; }
+  .legal-main h1 { font-size: clamp(32px, 8.5vw, 48px); }
+  .legal-main h2 { overflow-wrap: anywhere; }
+  .policy-toc nav { grid-template-columns: minmax(0, 1fr); }
+  .policy-toc nav a { min-height: 44px; display: flex; align-items: center; }
+  .privacy-index, .project-galleries { grid-template-columns: minmax(0, 1fr); }
+  .screen-gallery, .gallery-grid { gap: 20px; }
+  .screen-gallery .screen-frame,
+  .gallery-grid .shot-card { max-width: 100%; }
+  .screen-frame.phone img, .shot-card.portrait img {
+    max-height: min(540px, 75svh);
+  }
+  footer.shell {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  footer nav { gap: 4px 18px; }
+  .hero-device { overflow: hidden; }
+  .hero-device .halo { width: 100%; right: 0; }
+  .hero-device .mac { width: 100%; max-width: 100%; left: 0; }
+  .app > *, .app section, .app header > div { min-width: 0; }
+  .app header { gap: 8px; }
+  .app header button { flex-shrink: 0; }
+  .editor, .deliver-card { grid-column: auto; }
+}
+@media (max-width: 480px) {
+  .portfolio-card { padding: 20px !important; border-radius: 22px; }
+  .portfolio-card h2 { font-size: 30px !important; }
+  .portfolio-stage { padding: 14px 10px; }
+  .app-brand { flex-wrap: wrap; gap: 12px; }
+  .app-brand strong { font-size: 25px; }
+  .principles { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 1024px) and (max-height: 480px) {
+  .hero.shell { padding-top: 30px; }
+  .hero-originals { max-width: 480px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+.about-card > * { min-width: 0; }
+.about-card h2, .about-card p { overflow-wrap: anywhere; }
+@media (max-width: 1024px) {
+  .hero-device { overflow: hidden; }
+  .hero-device .halo { width: 100%; right: 0; }
+  .hero-device .chip.account { right: 0; }
+}
+@media (max-width: 760px) {
+  .badge { width: fit-content; max-width: 100%; }
+  .badge i { flex-shrink: 0; }
 }

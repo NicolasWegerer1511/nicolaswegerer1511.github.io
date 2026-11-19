@@ -1,4 +1,4 @@
-const mobileNavigation = window.matchMedia('(max-width: 760px), (max-width: 1000px) and (max-height: 480px)');
+const mobileNavigation = window.matchMedia('(max-width: 1024px)');
 
 for (const nav of document.querySelectorAll('.header .nav')) {
   const toggle = nav.querySelector('.menu');
@@ -17,6 +17,7 @@ for (const nav of document.querySelectorAll('.header .nav')) {
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
     if (!open) groups.forEach(button => setGroup(button, false));
+    if (mobileNavigation.matches) links.inert = !open;
     if (restoreFocus) toggle.focus();
   }
 
@@ -42,5 +43,10 @@ for (const nav of document.querySelectorAll('.header .nav')) {
       button.focus();
     });
   });
-  mobileNavigation.addEventListener('change', () => setMenu(false));
+  function updateLayout() {
+    setMenu(false);
+    links.inert = mobileNavigation.matches;
+  }
+  mobileNavigation.addEventListener('change', updateLayout);
+  updateLayout();
 }
